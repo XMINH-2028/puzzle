@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.zero {
+	position: relative;
+	height: 100vh;
+	background-image: url('images/space1.jpg');
+	background-position: center;
+	background-size: cover; 
+	overflow: hidden;
+
+
+}
+.the-first_wrap {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	overflow: hidden;
+}
+.the-first {
+	display: flex;
+	width: 100%;
+	height:100%;
+	position: relative;
+	/*transform: rotate(201deg);
+	transition: transform 5s linear;
+	transition-delay: 2s;*/
+	/*animation: rotate 0.001s infinite linear;*/	
+}
+.the-second_wrap {
+	flex: 50%;
+	background-color: black;
+	height: 100%;
+	position: relative;
+	/*transform: translateX(-145%);
+	transition: transform 5s linear;
+	transition-delay: 2s;*/
+}
+/*.the-second_mask {
+	position: absolute;
+	top:0;
+	left:100%;
+	background-color: silver;
+	width: 100%;
+	height:50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+}*/
+.the-thirst_wrap {
+	flex: 50%;
+	background-color: white;
+	height: 100%;
+	position: relative;
+	/*transform: translateX(145%);
+	transition: transform 5s linear;
+	transition-delay: 2s;*/
+}
+/*.the-thirst_mask {
+	position: absolute;
+	top:50%;
+	left:-100%;
+	width: 100%;
+	height:50%;
+	transform: translateX(50%);
+	border-radius: 100%;
+	background-color: silver;
+	transition: background-color;
+	transition-delay: 2s;
+}*/
+.the-thirst {
+	position: absolute;
+	top:0;
+	left:-100%;
+	background-color: white;
+	width: 100%;
+	height:50%;
+	transform: translateX(50%);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.the-thirst_child {
+	width:20%;
+	height:20%;
+	background-color: black;	
+	border-radius: 100%;
+}
+.the-second {
+	position: absolute;
+	top:50%;
+	left:50%;
+	background-color: black;
+	width: 50%;
+	height:50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	/*margin-left: -71%;
+	transition: margin 5s linear;
+	transition-delay: 2s;*/
+}
+.the-second_child {
+	width:20%;
+	height:20%;
+	background-color: white;	
+	border-radius: 100%;
+}
+@keyframes rotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
