@@ -8,7 +8,7 @@
 .zero {
 	position: relative;
 	height: 100vh;
-	background-image: url('images/space1.jpg');
+	background: url('images/space1.jpg');
 	background-position: center;
 	background-size: cover; 
 	overflow: hidden;
