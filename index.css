@@ -8,10 +8,77 @@
 .zero {
 	position: relative;
 	height: 100vh;
-	
+	background-image: url(images/space1.jpg);
+	background-size: cover;
+	background-position: center;
 	overflow: hidden;
+}
 
-
+/*.leftdoor {
+	position: absolute;
+	width: 50%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-image: url(images/leftdoor.png);
+	background-position: right;
+	background-size: cover;
+	animation: leftdoor 20s 2s linear forwards;
+}
+.rightdoor {
+	position: absolute;
+	width: 50%;
+	height:100%;
+	top:0px;
+	right:0px;
+	background-image: url(images/rightdoor.png);
+	background-position: left;
+	background-size: cover;
+	animation: rightdoor 20s 2s linear forwards;
+}*/
+.dragon {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	top:0px;
+	left:0px;
+	background-image: url(images/dragon.png);
+	background-position: bottom right;
+	background-size: cover;
+	animation: dragon 20s 2s linear forwards;
+}
+.unicorn {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	bottom:0px;
+	left:0px;
+	background-image: url(images/unicorn.png);
+	background-position: top right;
+	background-size: cover;
+	animation: unicorn 20s 2s linear forwards;
+}
+.turtle {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	bottom:0px;
+	right:0px;
+	background-image: url(images/turtle.png);
+	background-position: top left;
+	background-size: cover;
+	animation: turtle 20s 2s linear forwards;
+}
+.phoenix {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	top:0px;
+	right:0px;
+	background-image: url(images/phoenix.png);
+	background-position: bottom left;
+	background-size: cover;
+	animation: phoenix 20s 2s linear forwards;
 }
 .the-first_wrap {
 	position: absolute;
@@ -26,10 +93,7 @@
 	width: 100%;
 	height:100%;
 	position: relative;
-	/*transform: rotate(201deg);
-	transition: transform 5s linear;
-	transition-delay: 2s;*/
-	/*animation: rotate 0.001s infinite linear;*/	
+	animation: rotate 5s 2s ease-in-out forwards;
 }
 
 .the-second {
@@ -52,7 +116,34 @@
 }
 
 @keyframes rotate {
-	from {transform: rotate(0deg);}
-	to {transform: rotate(360deg);}
+	from {transform: rotate(0deg) scale(1);}
+	to {transform: rotate(-7380deg) scale(0);}
 }
+
+@keyframes dragon {
+	form {top:0px; left:0px;}
+	to {top:-100%;left:-100%;}
+}
+@keyframes unicorn {
+	form {bottom:0px; left:0px;}
+	to {bottom:-100%;left:-100%;}
+}
+@keyframes turtle {
+	form {bottom:0px; right:0px;}
+	to {bottom:-100%;right:-100%;}
+}
+@keyframes phoenix {
+	form {top:0px; right:0px;}
+	to {top:-100%;right:-100%;}
+}
+
+
+/*@keyframes leftdoor {
+	from {left:0%);}
+	to {left:-100%;}
+}
+@keyframes rightdoor {
+	from {right:0%);}
+	to {right:-100%;}
+}*/
 
