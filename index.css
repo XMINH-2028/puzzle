@@ -18,9 +18,24 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 	background-image: url(images/bagua.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: background-size 1s linear;
+}
+.first_child {
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	top: 40%;
+	left: 40%;
+	background-image: url('images/yangyin2.png');
 	background-size: cover;
 	background-position: center;
-	/*animation: scale 5s 2s linear forwards;*/
+	transition: 1s linear;
+}
+.fw_scale {
+	animation: fwscale 5s 2s cubic-bezier(1,0,1,0.5) forwards;
 }
 .the-first {
 	display: flex;
@@ -28,17 +43,23 @@
 	height:100%;
 	position: relative;
 	border-radius: 50%;
-	overflow: hidden;
+	overflow: hidden; 
 	opacity: 0;
-	/*animation: rotate 5s 2s linear forwards;*/
+	transform: scale(0);
+	transition: opacity 3s, transform 1s linear;
 	/*transform: rotate(201deg);
 	transition: transform 5s linear;
 	transition-delay: 2s;*/
 	/*animation: rotate 0.001s infinite linear;*/	
 }
+.tf_frotate {
+	animation: frotate 5s 2s cubic-bezier(1,0,1,0.5) forwards;
+}
+.tf_trotate {
+	animation: trotate 5s 2s cubic-bezier(1,0,1,0.5) forwards;
+}
 .the-second_wrap {
 	flex: 50%;
-	background-color: black;
 	height: 100%;
 	position: relative;
 	/*transform: translateX(-145%);
@@ -55,16 +76,15 @@
 	transform: translateX(-50%);
 	border-radius: 100%;
 }*/
-.the-thirst_wrap {
+.the-third_wrap {
 	flex: 50%;
-	background-color: white;
 	height: 100%;
 	position: relative;
 	/*transform: translateX(145%);
 	transition: transform 5s linear;
 	transition-delay: 2s;*/
 }
-/*.the-thirst_mask {
+/*.the-third_mask {
 	position: absolute;
 	top:50%;
 	left:-100%;
@@ -76,11 +96,10 @@
 	transition: background-color;
 	transition-delay: 2s;
 }*/
-.the-thirst {
+.the-third {
 	position: absolute;
 	top:0;
 	left:-100%;
-	background-color: white;
 	width: 100%;
 	height:50%;
 	transform: translateX(50%);
@@ -90,17 +109,15 @@
 	align-items: center;
 	z-index: 1;
 }
-.the-thirst_child {
+.the-third_child {
 	width:20%;
 	height:20%;
-	background-color: black;	
 	border-radius: 100%;
 }
 .the-second {
 	position: absolute;
 	top:50%;
 	left:50%;
-	background-color: black;
 	width: 50%;
 	height:50%;
 	transform: translateX(-50%);
@@ -116,7 +133,6 @@
 .the-second_child {
 	width:20%;
 	height:20%;
-	background-color: white;	
 	border-radius: 100%;
 }
 
@@ -142,15 +158,17 @@
 	background-size: cover;
 	animation: rightdoor 20s 2s linear forwards;
 }*/
-.turtle {
+.dragon {
 	position: absolute;
 	width: 50%;
 	height:50%;
 	top:0px;
-	left:0px;
-	background-position: bottom right;
+	right:0px;
+	background-position: bottom left;
 	background-size: cover;
-	/*animation: turtle 20s 2s linear forwards;*/
+}
+.opendg {
+	animation: dragon 10s 2s ease-in forwards;
 }
 .tiger {
 	position: absolute;
@@ -160,7 +178,9 @@
 	left:0px;
 	background-position: top right;
 	background-size: cover;
-	/*animation: tiger 20s 2s linear forwards;*/
+}
+.opentg {
+	animation: tiger 10s 2s ease-in forwards;
 }
 .phoenix {
 	position: absolute;
@@ -170,18 +190,22 @@
 	right:0px;
 	background-position: top left;
 	background-size: cover;
-	/*animation: phoenix 20s 2s linear forwards;*/
 	overflow: hidden;
 }
-.dragon {
+.openpn {
+	animation: phoenix 10s 2s ease-in forwards;
+}
+.turtle {
 	position: absolute;
 	width: 50%;
 	height:50%;
 	top:0px;
-	right:0px;
-	background-position: bottom left;
+	left:0px;
+	background-position: bottom right;
 	background-size: cover;
-	/*animation: dragon 20s 2s linear forwards;*/
+}
+.opentt {
+	animation: turtle 10s 2s ease-in forwards;
 }
 .four_symbols {
 	background-size: 80% 80%;
@@ -190,55 +214,79 @@
 	position: absolute;
 	transition: 0.5s linear;
 }
-.turtle_child {
-	background-image: url('images/turtle.png');
-	top:0px;
-	left:0px;
-}
-.tiger_child {
-	background-image: url('images/tiger.png');
-	bottom:0px;
-	left:0px;
-}
-.phoenix_child {
-	background-image: url('images/phoenix.png');
-	bottom:0px;
-	right:0px;
+.yangyin {
+	position: absolute;
+	width:14%;
+	height:14%;
+	border-radius: 50%;
+	top:43%;
+	left:43%;
 }
 .dragon_child {
 	background-image: url('images/dragon.png');
 	top:0px;
 	right:0px;
 }
+.dragon_child .yangyin {
+	background: green;
+}
+.tiger_child {
+	background-image: url('images/tiger.png');
+	bottom:0px;
+	left:0px;
+}
+.tiger_child .yangyin {
+	background: white;
+}
+.phoenix_child {
+	background-image: url('images/phoenix.png');
+	bottom:0px;
+	right:0px;
+}
+.phoenix_child .yangyin {
+	background: red;
+}
+.turtle_child {
+	background-image: url('images/turtle.png');
+	top:0px;
+	left:0px;
+}
+.turtle_child .yangyin {
+	background: black;
+}
 .four_symbols:hover {
 	transform: scale(1.2);
 	cursor: pointer;
 
 }
-@keyframes rotate {
+@keyframes frotate {
 	from {transform: rotate(0deg) scale(1);}
 	to {transform: rotate(-14780deg) scale(0);}
 }
-@keyframes scale {
+@keyframes trotate {
+	from {transform: rotate(0deg) scale(1);}
+	to {transform: rotate(14780deg) scale(0);}
+}
+@keyframes fwscale {
 	from {transform: translate(-50%,-50%) scale(1);}
 	to {transform: translate(-50%,-50%) scale(0);}
 }
 
 @keyframes dragon {
 	form {top:0px; right:0px;}
-	to {top:-100%;right:-100%;}
+	to {top:-50%;right:-50%;}
 }
 @keyframes tiger {
 	form {bottom:0px; left:0px;}
-	to {bottom:-100%;left:-100%;}
+	to {bottom:-50%;left:-50%;}
 }
 @keyframes turtle {
 	form {top:0px; left:0px;}
-	to {top:-100%;left:-100%;}
+	to {top:-50%;left:-50%;}
 }
 @keyframes phoenix {
 	form {bottom:0px; right:0px;}
-	to {bottom:-100%;right:-100%;}
+	to {bottom:-50%;right:-50%;}
 }
 /*@keyframes leftdoor {
 	from {left:0%);}
