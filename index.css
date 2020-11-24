@@ -21,7 +21,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center;
-	transition: background-size 1s linear;
+	transition: background-size 1.5s linear;
 }
 .first_child {
 	position: absolute;
@@ -47,7 +47,7 @@
 	overflow: hidden; 
 	opacity: 0;
 	transform: scale(0);
-	transition: opacity 2s, transform 2s linear;
+	transition: opacity 1.5s, transform 1.5s linear;
 	/*transform: rotate(201deg);
 	transition: transform 5s linear;
 	transition-delay: 2s;*/
