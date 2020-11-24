@@ -33,6 +33,7 @@
 	background-size: cover;
 	background-position: center;
 	transition: 1s linear;
+	animation: fcscale 5s linear infinite;
 }
 .fw_scale {
 	animation: fwscale 5s 2s cubic-bezier(1,0,1,0.5) forwards;
@@ -270,6 +271,13 @@
 @keyframes fwscale {
 	from {transform: translate(-50%,-50%) scale(1);}
 	to {transform: translate(-50%,-50%) scale(0);}
+}
+@keyframes fcscale {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(-360deg);}
+	50% {transform: rotateY(180deg);}
+	75% {transform: rotateY(180deg) rotate(-360deg);}
+	100% {transform:  rotate(0deg) rotateY(360deg)}
 }
 
 @keyframes dragon {
