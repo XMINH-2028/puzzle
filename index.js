@@ -102,6 +102,6 @@ for (let i=0;i<$$('.four_symbols').length;i++) {
 			$('.tiger').classList.add('opentg');
 			$('.turtle').classList.add('opentt');
 			$('.phoenix').classList.add('openpn');
-		},1200)
+		},2100)
 	})
 }
