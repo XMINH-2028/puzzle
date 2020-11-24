@@ -262,11 +262,11 @@
 }
 @keyframes frotate {
 	from {transform: rotate(0deg) scale(1);}
-	to {transform: rotate(-14780deg) scale(0);}
+	to {transform: rotate(-7200deg) scale(0);}
 }
 @keyframes trotate {
 	from {transform: rotate(0deg) scale(1);}
-	to {transform: rotate(14780deg) scale(0);}
+	to {transform: rotate(7200deg) scale(0);}
 }
 @keyframes fwscale {
 	from {transform: translate(-50%,-50%) scale(1);}
