@@ -7,7 +7,7 @@ $('button').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
 	setTimeout(()=>{
 		$('.zero_mask').style.dislay = 'none';
-	},2000)
+	},1500)
 })
 setTimeout(setInterval(()=>{
 	var dcwidth = document.body.offsetWidth;
@@ -55,7 +55,7 @@ setTimeout(setInterval(()=>{
 			}
 		}
 	}
-}),100)
+}),500)
 
 for (let i=0;i<$$('.four_symbols').length;i++) {
 	$$('.four_symbols')[i].addEventListener("click", function(){
