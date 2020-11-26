@@ -12,6 +12,13 @@
 	background-position: center;
 	overflow: hidden;
 }
+.zero_mask {
+	position: fixed;
+	background-image: radial-gradient(circle, white, grey, black);
+	width: 100%;
+	height: 100%;
+	transition: opacity 1.5s;
+}
 .the-first_wrap {
 	position: absolute;
 	top: 50%;

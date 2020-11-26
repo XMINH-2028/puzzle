@@ -2,7 +2,12 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 var zerobg = 0;
-
+setTimeout(()=>{
+	$('.zero_mask').style.opacity = '0';
+},500)
+setTimeout(()=>{
+	$('.zero_mask').style.display = 'none';
+},2000)
 setInterval(()=>{
 	var dcwidth = document.body.offsetWidth;
 	var dcheight = document.body.offsetHeight;
