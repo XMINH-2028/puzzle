@@ -9,7 +9,7 @@ $('button').addEventListener('click',()=>{
 		$('.zero_mask').style.dislay = 'none';
 	},2000)
 })
-setInterval(()=>{
+setTimeout(setInterval(()=>{
 	var dcwidth = document.body.offsetWidth;
 	var dcheight = document.body.offsetHeight;
 	if (dcwidth > dcheight) {
@@ -55,7 +55,7 @@ setInterval(()=>{
 			}
 		}
 	}
-})
+}),100)
 
 for (let i=0;i<$$('.four_symbols').length;i++) {
 	$$('.four_symbols')[i].addEventListener("click", function(){
