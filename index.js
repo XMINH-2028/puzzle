@@ -2,12 +2,13 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 var zerobg = 0;
-setTimeout(()=>{
+
+$('button').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
-},500)
-setTimeout(()=>{
-	$('.zero_mask').style.display = 'none';
-},2000)
+	setTimeout(()=>{
+		$('.zero_mask').style.dislay = 'none';
+	},2000)
+})
 setInterval(()=>{
 	var dcwidth = document.body.offsetWidth;
 	var dcheight = document.body.offsetHeight;
