@@ -18,7 +18,7 @@ $('.bagua_mask').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
 	setTimeout(()=>{
 		$('.zero_mask').style.display = 'none';
-	},1500)
+	},500)
 })
 setTimeout(setInterval(()=>{
 	dcwidth = document.body.offsetWidth;
@@ -124,7 +124,7 @@ for (let i=0;i<$$('.four_symbols').length;i++) {
 				$('.tiger').classList.add('opentg');
 				$('.turtle').classList.add('opentt');
 			$('.phoenix').classList.add('openpn');
-		},200)
-		},2000)
+		},1000)
+		},1000)
 	})
 }
