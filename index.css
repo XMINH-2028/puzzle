@@ -1,0 +1,331 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.zero {
+	position: relative;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+.zero_mask {
+	position: fixed;
+	background-image: radial-gradient(circle, white, silver, grey);
+	width: 100%;
+	height: 100%;
+	transition: opacity 1.5s;
+}
+.bagua {
+	position: absolute;
+	width: 90%;
+	height:90%;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.bagua_mask {
+	position: absolute;
+	top: 37.5%;
+	left:37.5%;
+	width: 25%;
+	height:25%;
+	background-image: url(images/yangyin.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: fcscale 5s linear infinite;
+	cursor: pointer;
+}
+.bagua_child {
+	position: absolute;
+	--widthA: calc(100% * 66 / 175);
+	--widthB: calc((100% - var(--widthA)) / 2);
+	width: var(--widthA);
+	height: 17%;
+	top:0;
+	left: var(--widthB);
+	clip-path: polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
+}
+.bagua_child > div {
+	width: 100%;
+	height: 25%;
+	position: absolute;
+}
+.bagua_child .yang {
+	background: black;
+}
+.yin {
+	display: flex;
+	justify-content: space-between;
+}
+.yin > div	{
+	width: 46.8%;
+	background: black;
+}
+.bagua_child > div:nth-child(1) {
+	left:0;
+	bottom:0;
+}
+.bagua_child > div:nth-child(2) {
+	left:0;
+	bottom:37.5%;
+}
+.bagua_child > div:nth-child(3) {
+	left:0;
+	top:0;
+}
+.bagua .wind {
+	transform: translate(79%,71%) rotate(45deg);
+}
+.bagua .water {
+	transform: translate(110%,246%) rotate(90deg);
+}
+.bagua .mountain {
+	transform: translate(79%,421%) rotate(135deg);
+}
+.bagua .land {
+	transform: translate(0%,488%) rotate(180deg);
+}
+.bagua .thunder {
+	transform: translate(-79%,421%) rotate(-135deg);
+}
+.bagua .fire {
+	transform: translate(-110%,246%) rotate(-90deg);
+}
+.bagua .lake {
+	transform: translate(-79%,71%) rotate(-45deg);
+}
+
+
+.the-first_wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-image: url(images/bagua.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: background-size 1.5s linear;
+}
+.first_child {
+	position: absolute;
+	width: 25%;
+	height: 25%;
+	top: 37.5%;
+	left: 37.5%;
+	background-image: url('images/yangyin2.png');
+	background-size: cover;
+	background-position: center;
+	transition: 1.5s linear;
+	animation: fcscale 5s linear infinite;
+}
+.fw_scale {
+	animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+}
+.the-first {
+	display: flex;
+	width: 100%;
+	height:100%;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden; 
+	opacity: 0;
+	transform: scale(0);
+	transition: opacity 1.5s, transform 1.5s linear;
+}
+.tf_frotate {
+	animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+}
+.tf_trotate {
+	animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+}
+.the-second_wrap {
+	flex: 50%;
+	height: 100%;
+	position: relative;
+}
+.the-third_wrap {
+	flex: 50%;
+	height: 100%;
+	position: relative;
+}
+.the-third {
+	position: absolute;
+	top:0;
+	left:-100%;
+	width: 100%;
+	height:50%;
+	transform: translateX(50%);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.the-third_child {
+	width:20%;
+	height:20%;
+	border-radius: 100%;
+}
+.the-second {
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 50%;
+	height:50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.the-second_child {
+	width:20%;
+	height:20%;
+	border-radius: 100%;
+}
+.dragon {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	top:0px;
+	right:0px;
+	background-position: bottom left;
+	background-size: cover;
+}
+.opendg {
+	animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+}
+.tiger {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	bottom:0px;
+	left:0px;
+	background-position: top right;
+	background-size: cover;
+}
+.opentg {
+	animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+}
+.phoenix {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	bottom:0px;
+	right:0px;
+	background-position: top left;
+	background-size: cover;
+	overflow: hidden;
+}
+.openpn {
+	animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+}
+.turtle {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	top:0px;
+	left:0px;
+	background-position: bottom right;
+	background-size: cover;
+}
+.opentt {
+	animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+}
+.four_symbols {
+	background-size: 68% 68%;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	transition: 0.5s linear;
+}
+.yangyin {
+	position: absolute;
+	width:14%;
+	height:14%;
+	border-radius: 50%;
+	top:43%;
+	left:43%;
+}
+.dragon_child {
+	background-image: url('images/dragon.png');
+	top:0px;
+	right:0px;
+}
+.dragon_child .yangyin {
+	background: green;
+}
+.tiger_child {
+	background-image: url('images/tiger.png');
+	bottom:0px;
+	left:0px;
+}
+.tiger_child .yangyin {
+	background: white;
+}
+.phoenix_child {
+	background-image: url('images/phoenix.png');
+	bottom:0px;
+	right:0px;
+}
+.phoenix_child .yangyin {
+	background: red;
+}
+.turtle_child {
+	background-image: url('images/turtle.png');
+	top:0px;
+	left:0px;
+}
+.turtle_child .yangyin {
+	background: black;
+}
+.four_symbols:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+
+}
+@keyframes frotate {
+	from {transform: rotate(0deg) scale(1);}
+	to {transform: rotate(-3600deg) scale(0);}
+}
+@keyframes trotate {
+	from {transform: rotate(0deg) scale(1);}
+	to {transform: rotate(3600deg) scale(0);}
+}
+@keyframes fwscale {
+	from {transform: translate(-50%,-50%) scale(1);}
+	to {transform: translate(-50%,-50%) scale(0);}
+}
+@keyframes fcscale {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(-360deg);}
+	50% {transform: rotateY(180deg);}
+	75% {transform: rotateY(180deg) rotate(-360deg);}
+	100% {transform:  rotate(0deg) rotateY(360deg)}
+}
+
+@keyframes dragon {
+	form {top:0px; right:0px;}
+	to {top:-50%;right:-50%;}
+}
+@keyframes tiger {
+	form {bottom:0px; left:0px;}
+	to {bottom:-50%;left:-50%;}
+}
+@keyframes turtle {
+	form {top:0px; left:0px;}
+	to {top:-50%;left:-50%;}
+}
+@keyframes phoenix {
+	form {bottom:0px; right:0px;}
+	to {bottom:-50%;right:-50%;}
+}
+
+
