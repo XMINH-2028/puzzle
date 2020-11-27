@@ -6,7 +6,7 @@ var zerobg = 0;
 $('button').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
 	setTimeout(()=>{
-		$('.zero_mask').style.dislay = 'none';
+		$('.zero_mask').style.display = 'none';
 	},1500)
 })
 setTimeout(setInterval(()=>{
