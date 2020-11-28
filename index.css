@@ -52,12 +52,10 @@
 }
 .bagua_child {
 	position: absolute;
-	--widthA: calc(100% * 66 / 175);
-	--widthB: calc((100% - var(--widthA)) / 2);
-	width: var(--widthA);
+	width: 37.71%;
 	height: 17%;
 	top:0;
-	left: var(--widthB);
+	left: 31.14%;
 	-webkit-clip-path:polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
 	clip-path: polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
 }
