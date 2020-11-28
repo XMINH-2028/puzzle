@@ -20,12 +20,19 @@
 	top:0;
 	left:0;
 	transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
 }
 .bagua {
 	position: absolute;
 	top: 50%;
 	left:50%;
 	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 }
 .bagua_mask {
 	position: absolute;
@@ -38,6 +45,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	animation: fcscale 5s linear infinite;
+	-webkit-animation: fcscale 5s linear infinite;
+	-o-animation: fcscale 5s linear infinite;
+	-moz-animation: fcscale 5s linear infinite;
 	cursor: pointer;
 }
 .bagua_child {
@@ -81,24 +91,52 @@
 }
 .bagua .wind {
 	transform: translate(79%,71%) rotate(45deg);
+	-webkit-transform: translate(79%,71%) rotate(45deg);
+	-o-transform: translate(79%,71%) rotate(45deg);
+	-ms-transform: translate(79%,71%) rotate(45deg);
+	-moz-transform: translate(79%,71%) rotate(45deg);
 }
 .bagua .water {
-	transform: translate(110%,246%) rotate(90deg);
+	transform: translate(110%,246%) rotate(90deg);	
+	-ms-transform: translate(110%,246%) rotate(90deg);
+	-webkit-transform: translate(110%,246%) rotate(90deg);
+	-o-transform: translate(110%,246%) rotate(90deg);
+	-moz-transform: translate(110%,246%) rotate(90deg);
 }
 .bagua .mountain {
 	transform: translate(79%,421%) rotate(135deg);
+	-webkit-transform: translate(79%,421%) rotate(135deg);
+	-o-transform: translate(79%,421%) rotate(135deg);
+	-ms-transform: translate(79%,421%) rotate(135deg);
+	-moz-transform: translate(79%,421%) rotate(135deg);
 }
 .bagua .land {
 	transform: translate(0%,488%) rotate(180deg);
+	-moz-transform: translate(0%,488%) rotate(180deg);
+	-o-transform: translate(0%,488%) rotate(180deg);
+	-webkit-transform: translate(0%,488%) rotate(180deg);
+	-ms-transform: translate(0%,488%) rotate(180deg);
 }
 .bagua .thunder {
 	transform: translate(-79%,421%) rotate(-135deg);
+	-webkit-transform: translate(-79%,421%) rotate(-135deg);
+	-o-transform: translate(-79%,421%) rotate(-135deg);
+	-ms-transform: translate(-79%,421%) rotate(-135deg);
+	-moz-transform: translate(-79%,421%) rotate(-135deg);
 }
 .bagua .fire {
 	transform: translate(-110%,246%) rotate(-90deg);
+	-o-transform: translate(-110%,246%) rotate(-90deg);
+	-ms-transform: translate(-110%,246%) rotate(-90deg);
+	-webkit-transform: translate(-110%,246%) rotate(-90deg);
+	-moz-transform: translate(-110%,246%) rotate(-90deg);
 }
 .bagua .lake {
 	transform: translate(-79%,71%) rotate(-45deg);
+	-o-transform: translate(-79%,71%) rotate(-45deg);
+	-webkit-transform: translate(-79%,71%) rotate(-45deg);
+	-ms-transform: translate(-79%,71%) rotate(-45deg);
+	-moz-transform: translate(-79%,71%) rotate(-45deg);
 }
 
 
@@ -107,11 +145,18 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 	background-image: url(images/bagua.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	transition: background-size 1s linear;
+	-o-transition: background-size 1s linear;
+	-moz-transition: background-size 1s linear;
+	-webkit-transition: background-size 1s linear;
 }
 .first_child {
 	position: absolute;
@@ -123,10 +168,19 @@
 	background-size: cover;
 	background-position: center;
 	transition: 1s linear;
+	-o-transition: 1s linear;
+	-webkit-transition: 1s linear;
+	-moz-transition: 1s linear;
 	animation: fcscale 5s linear infinite;
+	-o-animation: fcscale 5s linear infinite;
+	-webkit-animation: fcscale 5s linear infinite;
+	-moz-animation: fcscale 5s linear infinite;
 }
 .fw_scale {
 	animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
 }
 .the-first {
 	display: flex;
@@ -137,13 +191,26 @@
 	overflow: hidden; 
 	opacity: 0;
 	transform: scale(0);
+	-o-transform: scale(0);
+	-moz-transform: scale(0);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
 	transition: opacity 1s, transform 1s linear;
+	-webkit-transition: opacity 1s, transform 1s linear;
+	-o-transition: opacity 1s, transform 1s linear;
+	-moz-transition: opacity 1s, transform 1s linear;
 }
 .tf_frotate {
 	animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
 }
 .tf_trotate {
 	animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
 }
 .the-second_wrap {
 	flex: 50%;
@@ -162,11 +229,14 @@
 	width: 100%;
 	height:50%;
 	transform: translateX(50%);
+	-webkit-transform: translateX(50%);
+	-o-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
 	border-radius: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 1;
 }
 .the-third_child {
 	width:20%;
@@ -180,6 +250,10 @@
 	width: 50%;
 	height:50%;
 	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
 	border-radius: 100%;
 	display: flex;
 	justify-content: center;
@@ -202,6 +276,9 @@
 }
 .opendg {
 	animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
 }
 .tiger {
 	position: absolute;
@@ -214,6 +291,9 @@
 }
 .opentg {
 	animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
 }
 .phoenix {
 	position: absolute;
@@ -227,6 +307,9 @@
 }
 .openpn {
 	animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
 }
 .turtle {
 	position: absolute;
@@ -239,6 +322,9 @@
 }
 .opentt {
 	animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
 }
 .four_symbols {
 	background-size: 68% 68%;
@@ -246,6 +332,9 @@
 	background-repeat: no-repeat;
 	position: absolute;
 	transition: 0.5s linear;
+	-o-transition: 0.5s linear;
+	-webkit-transition: 0.5s linear;
+	-moz-transition: 0.5s linear;
 }
 .yangyin {
 	position: absolute;
@@ -289,6 +378,10 @@
 }
 .four_symbols:hover {
 	transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
 	cursor: pointer;
 
 }
