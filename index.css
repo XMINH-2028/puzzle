@@ -404,7 +404,7 @@
 	25% {transform: rotate(-360deg);}
 	50% {transform: rotateY(180deg);}
 	75% {transform: rotateY(180deg) rotate(-360deg);}
-	100% {transform:  rotate(0deg) rotateY(360deg)}
+	100% {transform:  rotate(0deg) rotateY(-360deg)}
 }
 
 @keyframes dragon {
