@@ -40,10 +40,6 @@
 	left:37.5%;
 	width: 25%;
 	height:25%;
-	background-image: url(images/yangyin.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
 	animation: fcscale 5s linear infinite;
 	-webkit-animation: fcscale 5s linear infinite;
 	-o-animation: fcscale 5s linear infinite;
@@ -186,7 +182,9 @@
 	height:100%;
 	position: relative;
 	border-radius: 50%;
-	overflow: hidden; 
+	overflow: hidden;
+}
+.the-first_wrap .the-first {
 	opacity: 0;
 	transform: scale(0);
 	-o-transform: scale(0);
@@ -214,11 +212,13 @@
 	flex: 50%;
 	height: 100%;
 	position: relative;
+	background: black;
 }
 .the-third_wrap {
 	flex: 50%;
 	height: 100%;
 	position: relative;
+	background: white;
 }
 .the-third {
 	position: absolute;
@@ -235,11 +235,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: white;
 }
 .the-third_child {
 	width:20%;
 	height:20%;
 	border-radius: 100%;
+	background: black;
 }
 .the-second {
 	position: absolute;
@@ -257,11 +259,13 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
+	background: black;
 }
 .the-second_child {
 	width:20%;
 	height:20%;
 	border-radius: 100%;
+	background: white;
 }
 .dragon {
 	position: absolute;
