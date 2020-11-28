@@ -21,8 +21,6 @@
 }
 .bagua {
 	position: absolute;
-	width: 90%;
-	height:90%;
 	top: 50%;
 	left:50%;
 	transform: translate(-50%,-50%);
@@ -48,7 +46,6 @@
 	height: 17%;
 	top:0;
 	left: var(--widthB);
-	
 	-webkit-clip-path:polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
 	clip-path: polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
 }
