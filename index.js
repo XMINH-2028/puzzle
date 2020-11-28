@@ -77,7 +77,7 @@ for (let i=0;i<$$('.four_symbols').length;i++) {
 		for (let i=0;i<$$('.four_symbols').length;i++) {
 			$$('.four_symbols')[i].style.transform ="scale(1)";
 		}
-		$('.the-first').style.transform = 'scale(1)';
+		
 		$('.the-first').style.opacity = '1';
 		$('.the-first_wrap').style.backgroundSize = '0% 0%';
 		$('.first_child').style.transform = 'scale(0)';
@@ -123,8 +123,8 @@ for (let i=0;i<$$('.four_symbols').length;i++) {
 				$('.dragon').classList.add('opendg');
 				$('.tiger').classList.add('opentg');
 				$('.turtle').classList.add('opentt');
-			$('.phoenix').classList.add('openpn');
-		},1000)
+				$('.phoenix').classList.add('openpn');
+			},200)
 		},1000)
 	})
 }
