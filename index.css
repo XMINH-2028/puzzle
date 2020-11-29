@@ -405,8 +405,8 @@
 		 -moz-transform: rotate(-360deg) rotateY(180deg);-o-transform: rotate(-360deg) rotateY(180deg);}
 	75% {transform:rotate(0deg) rotateY(180deg);-webkit-transform:rotate(0deg) rotateY(180deg);
 		-o-transform:rotate(0deg) rotateY(180deg);-moz-transform:rotate(0deg) rotateY(180deg);}
-	100% {transform:rotate(0deg) rotate(0deg);-webkit-transform:rotate(0deg) rotate(0deg);-o-transform:rotate(0deg) rotate(0deg);
-		-moz-transform:rotate(0deg) rotate(0deg);}
+	100% {transform:rotate(0deg) rotateY(0deg);-webkit-transform:rotate(0deg) rotateY(0deg);-o-transform:rotate(0deg) rotateY(0deg);
+		-moz-transform:rotate(0deg) rotateY(0deg);}
 	
 }
 
