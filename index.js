@@ -12,7 +12,8 @@ if (dcwidth > dcheight) {
 	$('.bagua').style.height = '90vw';
 	$('.bagua').style.width = '90vw';
 }
-
+alert(dcwidth);
+alert(dcheight);
 
 $('.bagua_mask').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
