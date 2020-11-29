@@ -6,7 +6,7 @@
 	-webkit-box-sizing: border-box;
 }
 .zero {
-	position: relative;
+	position: relative;	
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;
@@ -51,8 +51,8 @@
 	height: 17%;
 	top:0;
 	left: 31.14%;
-	-webkit-clip-path:polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
 	clip-path: polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
+	-webkit-clip-path:polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
 }
 .bagua_child > div {
 	width: 100%;
