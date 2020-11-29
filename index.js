@@ -2,8 +2,9 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 var zerobg = 0;
-var dcwidth = document.body.offsetWidth;
-var dcheight = document.body.offsetHeight;
+var dcwidth = window.innerWidth;
+var dcheight = window.innerHeight;
+$('.zero').style.height = dcheight+'px';
 if (dcwidth > dcheight) {
 	$('.bagua').style.height = 0.9*dcheight+'px';
 	$('.bagua').style.width = 0.9*dcheight+'px';
@@ -12,7 +13,6 @@ if (dcwidth > dcheight) {
 	$('.bagua').style.height = 0.9*dcwidth+'px';
 	$('.bagua').style.width = 0.9*dcwidth+'px';
 }
-
 $('.bagua_mask').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
 	setTimeout(()=>{
@@ -20,8 +20,9 @@ $('.bagua_mask').addEventListener('click',()=>{
 	},500)
 })
 setTimeout(setInterval(()=>{
-	dcwidth = document.body.offsetWidth;
-	dcheight = document.body.offsetHeight;
+	dcwidth = window.innerWidth;
+	dcheight = window.innerHeight;
+	$('.zero').style.height = dcheight+'px';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
