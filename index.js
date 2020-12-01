@@ -149,3 +149,5 @@ $('.signup').addEventListener('click',()=>{
 		$('.bagua_mask form').style.opacity = "1";
 	},1000)
 })
+
+	
