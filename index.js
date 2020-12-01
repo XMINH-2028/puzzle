@@ -150,14 +150,3 @@ $('.signup').addEventListener('click',()=>{
 	},1000)
 })
 
-var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-
-if (orientation === "landscape-primary") {
-  alert("That looks good.");
-} else if (orientation === "landscape-secondary") {
-  alert("Mmmh... the screen is upside down!");
-} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
-  alert("Mmmh... you should rotate your device to landscape");
-} else if (orientation === undefined) {
-  alert("The orientation API isn't supported in this browser :("); 
-}
