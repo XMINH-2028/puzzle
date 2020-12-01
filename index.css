@@ -73,10 +73,10 @@ form label {
 	-moz-animation-play-state: paused;
 	-o-animation-play-state: paused;
 	transform: translate(-50%,-50%) rotate(-360deg) !important;
-	-webkit-transform: translate(-50%,-50%) rotate(-360deg) !important;
-	-moz-transform: translate(-50%,-50%) rotate(-360deg) !important;
-	-o-transform: translate(-50%,-50%) rotate(-360deg) !important;
-	-ms-transform: translate(-50%,-50%) rotate(-360deg) !important;
+	-webkit-transform: translate(-50%,-50%) rotate(0deg) !important;
+	-moz-transform: translate(-50%,-50%) rotate(0deg) !important;
+	-o-transform: translate(-50%,-50%) rotate(0deg) !important;
+	-ms-transform: translate(-50%,-50%) rotate(0deg) !important;
 	transition: 1s linear;
 }
 .balance_child1 {
