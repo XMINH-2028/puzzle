@@ -141,12 +141,15 @@ function animateTime() {
 }
 var anT = setInterval(animateTime,100);
 $('.signup').addEventListener('click',()=>{
-	$('.bagua_mask').classList.add('balance');
-	$('.bagua_mask .the-second').classList.add('balance_child1');
-	$('.bagua_mask .the-third').classList.add('balance_child1');
-	$('.bagua_mask .the-first').classList.add('balance_child2');
 	setTimeout(()=>{
-		$('.bagua_mask form').style.opacity = "1";
-	},1000)
+		$('.bagua_mask').classList.add('balance_after');
+		$('.bagua_mask .the-second').classList.add('balance_child1');
+		$('.bagua_mask .the-third').classList.add('balance_child1');
+		$('.bagua_mask .the-first').classList.add('balance_child2');
+		setTimeout(()=>{
+			$('.bagua_mask form').style.opacity = "1";
+		},1000)
+	},100)
+	$('.bagua_mask').classList.add('balance');
 })
 
