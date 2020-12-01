@@ -70,16 +70,13 @@ form label {
 	-webkit-animation-play-state: paused;
 	-moz-animation-play-state: paused;
 	-o-animation-play-state: paused;
-}
-.balance_after {
 	width: 46% !important;
 	height:	46% !important;
 	transform: translate(-50%,-50%) rotate(0deg) !important;
 	-webkit-transform: translate(-50%,-50%) rotate(0deg) !important;
-	-moz-transform: translate(-50%,-50%) rotate(0deg) !important;
 	-o-transform: translate(-50%,-50%) rotate(0deg) !important;
+	-moz-transform: translate(-50%,-50%) rotate(0deg) !important;
 	-ms-transform: translate(-50%,-50%) rotate(0deg) !important;
-	transition: 1s linear;
 }
 .balance_child1 {
 	transform: scaleX(0) !important;
