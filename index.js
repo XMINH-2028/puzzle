@@ -1,6 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+/*SET START WINDOW SIZE---*/
 var zerobg = 0;
 var dcwidth = window.innerWidth;
 var dcheight = window.innerHeight;
@@ -13,12 +14,14 @@ if (dcwidth > dcheight) {
 	$('.bagua').style.height = 0.9*dcwidth+'px';
 	$('.bagua').style.width = 0.9*dcwidth+'px';
 }
-$('.bagua_mask').addEventListener('click',()=>{
+
+
+/*$('.bagua_mask').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
 	setTimeout(()=>{
 		$('.zero_mask').style.display = 'none';
 	},500)
-})
+})*/
 setTimeout(setInterval(()=>{
 	dcwidth = window.innerWidth;
 	dcheight = window.innerHeight;
@@ -72,6 +75,7 @@ setTimeout(setInterval(()=>{
 	}
 }),500)
 
+/*CHOOSE GAME---*/
 for (let i=0;i<$$('.four_symbols').length;i++) {
 	$$('.four_symbols')[i].addEventListener("click", function(){
 		for (let i=0;i<$$('.four_symbols').length;i++) {
@@ -128,3 +132,20 @@ for (let i=0;i<$$('.four_symbols').length;i++) {
 		},1000)
 	})
 }
+
+/*SIGN---*/
+var animate_time = 0;
+function animateTime() {
+	animate_time +=1 ;
+	if (animate_time === 60) {animate_time = 0;}
+}
+var anT = setInterval(animateTime,100);
+$('.signup').addEventListener('click',()=>{
+	$('.bagua_mask').classList.add('balance');
+	$('.bagua_mask .the-second').classList.add('balance_child1');
+	$('.bagua_mask .the-third').classList.add('balance_child1');
+	$('.bagua_mask .the-first').classList.add('balance_child2');
+	setTimeout(()=>{
+		$('.bagua_mask form').style.opacity = "1";
+	},1000)
+})

@@ -33,17 +33,51 @@
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 }
+form {
+	position: absolute;
+	font-size: 14px;
+	top:0;
+	opacity: 0;
+	transition: 0.5s linear;
+}
+form input {
+	width: 100%;
+	position: relative;
+}
+
+form label {
+	color: white;
+}
 .bagua_mask {
 	position: absolute;
-	top: 37.5%;
-	left:37.5%;
 	width: 25%;
 	height:25%;
-	animation: fcscale 5s linear infinite;
-	-webkit-animation: fcscale 5s linear infinite;
-	-o-animation: fcscale 5s linear infinite;
-	-moz-animation: fcscale 5s linear infinite;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	animation: fcscale 6s linear infinite;
+	-webkit-animation: fcscale 6s linear infinite;
+	-o-animation: fcscale 6s linear infinite;
+	-moz-animation: fcscale 6s linear infinite;
 	cursor: pointer;
+}
+.balance {
+	width: 46% !important;
+	height:	46% !important;
+	transform: translate(-50%,-50%) rotate(-360deg) !important;
+	transition: 1s linear;
+}
+.balance_child1 {
+	transform: scaleX(0) !important;
+	transition: 1s linear;
+}
+.balance_child2 {
+	border-radius: 0 !important;
+	transition: 1s linear;
 }
 .bagua_child {
 	position: absolute;
@@ -61,6 +95,14 @@
 }
 .bagua_child .yang {
 	background: black;
+	display: flex;
+	font-size: 68%;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.sky .yang {
+	cursor: pointer;
 }
 .yin {
 	display: flex;
@@ -69,6 +111,10 @@
 .yin > div	{
 	width: 46.8%;
 	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
 }
 .bagua_child > div:nth-child(1) {
 	left:0;
@@ -155,8 +201,13 @@
 	position: absolute;
 	width: 25%;
 	height: 25%;
-	top: 37.5%;
-	left: 37.5%;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 	background-image: url('images/yangyin2.png');
 	background-size: cover;
 	background-position: center;
@@ -164,10 +215,10 @@
 	-o-transition: 1s linear;
 	-webkit-transition: 1s linear;
 	-moz-transition: 1s linear;
-	animation: fcscale 5s linear infinite;
-	-o-animation: fcscale 5s linear infinite;
-	-webkit-animation: fcscale 5s linear infinite;
-	-moz-animation: fcscale 5s linear infinite;
+	animation: fcscale 6s linear infinite;
+	-o-animation: fcscale 6s linear infinite;
+	-webkit-animation: fcscale 6s linear infinite;
+	-moz-animation: fcscale 6s linear infinite;
 }
 .fw_scale {
 	animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
@@ -208,46 +259,12 @@
 	position: relative;
 	background: black;
 }
-.the-third_wrap {
-	flex: 50%;
-	height: 100%;
-	position: relative;
-	background: white;
-}
-.the-third {
-	position: absolute;
-	top:0;
-	left:-100%;
-	width: 100%;
-	height:50%;
-	transform: translateX(50%);
-	-webkit-transform: translateX(50%);
-	-o-transform: translateX(50%);
-	-moz-transform: translateX(50%);
-	-ms-transform: translateX(50%);
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: white;
-}
-.the-third_child {
-	width:20%;
-	height:20%;
-	border-radius: 100%;
-	background: black;
-}
 .the-second {
 	position: absolute;
-	top:50%;
-	left:50%;
+	top: 50%;
+	left: 25%;
 	width: 50%;
 	height:50%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
 	border-radius: 100%;
 	display: flex;
 	justify-content: center;
@@ -261,6 +278,31 @@
 	border-radius: 100%;
 	background: white;
 }
+.the-third_wrap {
+	flex: 50%;
+	height: 100%;
+	position: relative;
+	background: white;
+}
+.the-third {
+	position: absolute;
+	top:0;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+.the-third_child {
+	width:20%;
+	height:20%;
+	border-radius: 100%;
+	background: black;
+}
+
 .dragon {
 	position: absolute;
 	width: 50%;
@@ -398,14 +440,16 @@
 		-moz-transform: translate(-50%,-50%) scale(0);}
 }
 @keyframes fcscale {
-	0% {transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-o-transform: rotate(0deg);}
-	25% {transform: rotate(-360deg);-webkit-transform: rotate(-360deg);-moz-transform: rotate(-360deg);-o-transform: rotate(-360deg);}
-	50% {transform: rotate(-360deg) rotateY(180deg);-webkit-transform: rotate(-360deg) rotateY(180deg);
-		 -moz-transform: rotate(-360deg) rotateY(180deg);-o-transform: rotate(-360deg) rotateY(180deg);}
-	75% {transform:rotate(0deg) rotateY(180deg);-webkit-transform:rotate(0deg) rotateY(180deg);
-		-o-transform:rotate(0deg) rotateY(180deg);-moz-transform:rotate(0deg) rotateY(180deg);}
-	100% {transform:rotate(0deg) rotateY(0deg);-webkit-transform:rotate(0deg) rotateY(0deg);-o-transform:rotate(0deg) rotateY(0deg);
-		-moz-transform:rotate(0deg) rotateY(0deg);}
+	0% {transform: translate(-50%,-50%) rotate(0deg);-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);-o-transform: translate(-50%,-50%) rotate(0deg);}
+	40% {transform: translate(-50%,-50%) rotate(-360deg);-webkit-transform: translate(-50%,-50%) rotate(-360deg);
+		-moz-transform: translate(-50%,-50%) rotate(-360deg);-o-transform: translate(-50%,-50%) rotate(-360deg);}
+	50% {transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-webkit-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);
+		 -moz-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-o-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);}
+	90% {transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);}
+	100% {transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-moz-transform:rotate(0deg) rotateY(0deg);}
 	
 }
 
