@@ -398,13 +398,20 @@
 		-moz-transform: translate(-50%,-50%) scale(0);}
 }
 @keyframes fcscale {
-	0% {transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-o-transform: rotate(0deg);}
-	25% {transform: rotate(-360deg);-webkit-transform: rotate(-360deg);-moz-transform: rotate(-360deg);-o-transform: rotate(-360deg);}
+	0% {transform: rotate(0deg) rotateY(0deg);-webkit-transform: rotate(0deg) rotateY(0deg);
+		-moz-transform: rotate(0deg) rotateY(0deg);-o-transform: rotate(0deg) rotateY(0deg);
+		-ms-transform: rotate(0deg) rotateY(0deg);}
+	25% {transform: rotate(-360deg) rotateY(0deg);-webkit-transform: rotate(-360deg) rotateY(0deg);
+		-moz-transform: rotate(-360deg) rotateY(0deg);-o-transform: rotate(-360deg) rotateY(0deg);
+		-ms-transform: rotate(-360deg) rotateY(0deg);}
 	50% {transform: rotate(-360deg) rotateY(180deg);-webkit-transform: rotate(-360deg) rotateY(180deg);
-		 -moz-transform: rotate(-360deg) rotateY(180deg);-o-transform: rotate(-360deg) rotateY(180deg);}
+		 -moz-transform: rotate(-360deg) rotateY(180deg);-o-transform: rotate(-360deg) rotateY(180deg);
+		 -ms-transform: rotate(-360deg) rotateY(180deg);}
 	75% {transform:rotate(0deg) rotateY(180deg);-webkit-transform:rotate(0deg) rotateY(180deg);
-		-o-transform:rotate(0deg) rotateY(180deg);-moz-transform:rotate(0deg) rotateY(180deg);}
-	100% {transform:rotate(0deg) rotateY(0deg);-webkit-transform:rotate(0deg) rotateY(0deg);-o-transform:rotate(0deg) rotateY(0deg);
+		-o-transform:rotate(0deg) rotateY(180deg);-moz-transform:rotate(0deg) rotateY(180deg);
+		-ms-transform:rotate(0deg) rotateY(180deg);}
+	100% {transform:rotate(0deg) rotateY(0deg);-webkit-transform:rotate(0deg) rotateY(0deg);
+		-o-transform:rotate(0deg) rotateY(0deg);-ms-transform:rotate(0deg) rotateY(0deg);
 		-moz-transform:rotate(0deg) rotateY(0deg);}
 	
 }
