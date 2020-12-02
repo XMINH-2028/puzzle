@@ -55,16 +55,12 @@ form {
 	display: none;
 	transition: 0.5s linear;
 }
-.fontform {
-	font-size: 18%;
-}
+
 form input {
 	width: 100%;
 	position: relative;
 }
-.fontinput {
-	height:5px;
-}
+
 form label {
 	color: white;
 }
@@ -131,6 +127,7 @@ form label {
 	align-items: center;
 	color: #fff;
 }
+
 .sky .yang {
 	cursor: pointer;
 }
@@ -509,4 +506,33 @@ form label {
 	to {bottom:-50%;right:-50%;}
 }
 
+@media screen and (max-height: 280px ) {
+	.bagua_child .yang {
+		font-size: 30% !important;
+	}
+}
 
+@media screen and (max-height: 180px ) {
+	form {
+		font-size: 18%;
+	}
+	form input {
+		height: 5px !important;
+		line-height: 5px !important;
+	}
+	.bagua_child .yang {
+		font-size: 4px !important;
+	}
+}
+@media screen and (max-height: 100px ) {
+	form {
+		font-size: 3px;
+	}
+	form input {
+		height: 3px !important;
+		line-height: 3px !important;
+	}
+	.bagua_child .yang {
+		font-size: 3px !important;
+	}
+}

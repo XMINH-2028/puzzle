@@ -155,15 +155,12 @@ for (let i=0;i<$$('input').length;i++) {
 	$$('input')[i].addEventListener('focus',()=>{
 		$('.zero').classList.remove('zerohd');
 		setInterval(()=>{
-			if (dcheight<280) {
+			if (dcheight<180 ) {
 				$('.bagua').classList.add('bgscale5');
 				$('.zero_mask').classList.add('zmscale5');
 				$('.bagua').classList.remove('bgscale2');
 				$('.zero_mask').classList.remove('zmscale2');
-				$('form').classList.add('fontform');
-				for (let i=0;i<$$('form input').length;i++) {
-					$$('form input')[i].classList.add('fontinput');
-				}
+				
 			} else {
 				$('.bagua').classList.add('bgscale2');
 				$('.zero_mask').classList.add('zmscale2');
