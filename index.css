@@ -510,13 +510,27 @@ form label {
 
 @media screen and (max-height: 280px ) {
 	.bagua_child .yang {
-		font-size: 36% !important;
+		font-size: 50% !important;
+	}
+}
+
+@media screen and (max-height: 200px ) {
+	form {
+		font-size: 6px;
+	}
+	form input {
+		height: 6px !important;
+		line-height: 6px !important;
+		font-size: 6px;
+	}
+	.bagua_child .yang {
+		font-size: 6px !important;
 	}
 }
 
 @media screen and (max-height: 180px ) {
 	form {
-		font-size: 18%;
+		font-size: 4px;
 	}
 	form input {
 		height: 5px !important;
