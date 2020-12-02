@@ -50,7 +50,6 @@
 }
 form {
 	position: absolute;
-	font-size: 68%;
 	top:0;
 	display: none;
 	transition: 0.5s linear;
@@ -124,7 +123,6 @@ form label {
 .bagua_child .yang {
 	background: black;
 	display: flex;
-	font-size: 68%;
 	justify-content: center;
 	align-items: center;
 	color: #fff;
@@ -508,9 +506,38 @@ form label {
 	to {bottom:-50%;right:-50%;}
 }
 
+@media screen and (max-width: 576px ) {
+	.bagua_child .yang {
+		font-size: 68%;
+	}
+	form {
+		font-size: 68%;
+	}
+}
+@media screen and (max-width: 280px ) {
+	.bagua_child .yang {
+		font-size: 50%;
+	}
+	form {
+		font-size: 50%;
+	}
+	form input {
+		height: 7px !important;
+		line-height: 7px !important;
+		font-size: 7px;
+	}
+}
 @media screen and (max-height: 280px ) {
 	.bagua_child .yang {
 		font-size: 50% !important;
+	}
+	form {
+		font-size: 50%;
+	}
+	form input {
+		height: 7px !important;
+		line-height: 7px !important;
+		font-size: 7px;
 	}
 }
 
