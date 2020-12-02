@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	
 }
 .zero {
 	position: relative;	
@@ -35,6 +34,10 @@
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 }
+.bgscale {
+	transform: translate(-50%,-50%) scale(2);
+	transition: 1s;
+}
 form {
 	position: absolute;
 	font-size: 14px;
@@ -50,6 +53,7 @@ form input {
 form label {
 	color: white;
 }
+
 .bagua_mask {
 	position: absolute;
 	width: 25%;
