@@ -154,11 +154,12 @@ $('.signup').addEventListener('click',()=>{
 for (let i=0;i<$$('input').length;i++) {
 	$$('input')[i].addEventListener('focus',()=>{
 		setInterval(()=>{
-			if (dcwidth<200 || dcheight<200) {
+			if (dcheight<200) {
 				$('.bagua').classList.add('bgscale5');
 				$('.bagua').classList.remove('bgscale2');
 			} else {
 				$('.bagua').classList.add('bgscale2');
+				$('.zero_mask').classList.add('zmscale2');
 				$('.bagua').classList.remove('bgscale5');
 			}
 		}) 

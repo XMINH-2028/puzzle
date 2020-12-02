@@ -7,10 +7,8 @@
 }
 .zero {
 	position: relative;	
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
+	overflow-x: hidden;
+	
 }
 .zero_mask {
 	position: absolute;
@@ -23,6 +21,9 @@
 	-o-transition: opacity 0.5s;
 	-webkit-transition: opacity 0.5s;
 	-moz-transition: opacity 0.5s;
+}
+.zmscale2 {
+	height: 200%;
 }
 .bagua {
 	position: absolute;
