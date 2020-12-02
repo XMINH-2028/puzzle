@@ -506,7 +506,7 @@ form label {
 	to {bottom:-50%;right:-50%;}
 }
 
-@media screen and (max-width: 576px ) {
+@media screen and (max-width: 680px) and (max-height: 1000px), (max-width: 1000px) and (max-height: 680px){
 	.bagua_child .yang {
 		font-size: 68%;
 	}
