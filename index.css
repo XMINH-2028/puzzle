@@ -34,8 +34,12 @@
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 }
-.bgscale {
+.bgscale2 {
 	transform: translate(-50%,-50%) scale(2);
+	transition: 1s;
+}
+.bgscale5 {
+	transform: translate(-50%,-50%) scale(5);
 	transition: 1s;
 }
 form {
