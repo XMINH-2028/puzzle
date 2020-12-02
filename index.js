@@ -141,6 +141,7 @@ function animateTime() {
 }
 var anT = setInterval(animateTime,100);
 $('.signup').addEventListener('click',()=>{
+	$('.bagua_mask').classList.remove('bmrotate');
 	$('.bagua_mask').classList.add('balance');
 	$('.bagua_mask .the-second').classList.add('balance_child1');
 	$('.bagua_mask .the-third').classList.add('balance_child1');
