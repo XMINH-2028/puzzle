@@ -153,6 +153,7 @@ $('.signup').addEventListener('click',()=>{
 
 for (let i=0;i<$$('input').length;i++) {
 	$$('input')[i].addEventListener('focus',()=>{
+		$('.zero').classList.remove('zerohd');
 		setInterval(()=>{
 			if (dcheight<280) {
 				$('.bagua').classList.add('bgscale5');
