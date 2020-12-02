@@ -523,8 +523,7 @@ form label {
 	}
 	form input {
 		height: 7px !important;
-		line-height: 7px !important;
-		font-size: 7px;
+		font-size: 6px;
 	}
 }
 @media screen and (max-height: 280px ) {
@@ -536,8 +535,7 @@ form label {
 	}
 	form input {
 		height: 7px !important;
-		line-height: 7px !important;
-		font-size: 7px;
+		font-size: 6px;
 	}
 }
 
@@ -547,8 +545,7 @@ form label {
 	}
 	form input {
 		height: 6px !important;
-		line-height: 6px !important;
-		font-size: 6px;
+		font-size: 5px;
 	}
 	.bagua_child .yang {
 		font-size: 6px !important;
@@ -561,8 +558,7 @@ form label {
 	}
 	form input {
 		height: 5px !important;
-		line-height: 5px !important;
-		font-size: 5px;
+		font-size: 4px;
 	}
 	.bagua_child .yang {
 		font-size: 4px !important;
@@ -574,8 +570,7 @@ form label {
 	}
 	form input {
 		height: 3px !important;
-		line-height: 3px !important;
-		font-size: 3px;
+		font-size: 2px;
 	}
 	.bagua_child .yang {
 		font-size: 3px !important;
