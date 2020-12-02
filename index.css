@@ -4,9 +4,11 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	
 }
 .zero {
 	position: relative;	
+	height: 100vh;
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;
