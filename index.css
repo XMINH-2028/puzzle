@@ -54,14 +54,14 @@ form {
 	transition: 0.5s linear;
 }
 .fontform {
-	font-size: 36%;
+	font-size: 18%;
 }
 form input {
 	width: 100%;
 	position: relative;
 }
 .fontinput {
-	height:10px;
+	height:5px;
 }
 form label {
 	color: white;

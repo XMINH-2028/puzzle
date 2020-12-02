@@ -154,7 +154,7 @@ $('.signup').addEventListener('click',()=>{
 for (let i=0;i<$$('input').length;i++) {
 	$$('input')[i].addEventListener('focus',()=>{
 		setInterval(()=>{
-			if (dcheight<200) {
+			if (dcheight<280) {
 				$('.bagua').classList.add('bgscale5');
 				$('.zero_mask').classList.add('zmscale5');
 				$('.bagua').classList.remove('bgscale2');
