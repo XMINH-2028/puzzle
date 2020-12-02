@@ -159,11 +159,19 @@ for (let i=0;i<$$('input').length;i++) {
 				$('.zero_mask').classList.add('zmscale5');
 				$('.bagua').classList.remove('bgscale2');
 				$('.zero_mask').classList.remove('zmscale2');
+				$('form').classList.add('fontform');
+				for (let i=0;i<$$('form input').length;i++) {
+					$$('form input')[i].classList.add('fontinput');
+				}
 			} else {
 				$('.bagua').classList.add('bgscale2');
 				$('.zero_mask').classList.add('zmscale2');
 				$('.bagua').classList.remove('bgscale5');
 				$('.zero_mask').classList.remove('zmscale5');
+				$('form').classList.remove('fontform');
+				for (let i=0;i<$$('form input').length;i++) {
+					$$('form input')[i].classList.remove('fontinput');
+				}
 			}
 		}) 
 		

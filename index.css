@@ -53,11 +53,16 @@ form {
 	display: none;
 	transition: 0.5s linear;
 }
+.fontform {
+	font-size: 50%;
+}
 form input {
 	width: 100%;
 	position: relative;
 }
-
+.fontinput {
+	height:15px;
+}
 form label {
 	color: white;
 }
