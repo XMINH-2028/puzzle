@@ -452,15 +452,20 @@ form label {
 }
 @keyframes fcscale {
 	0% {transform: translate(-50%,-50%) rotate(0deg);-webkit-transform: translate(-50%,-50%) rotate(0deg);
-		-moz-transform: translate(-50%,-50%) rotate(0deg);-o-transform: translate(-50%,-50%) rotate(0deg);}
+		-moz-transform: translate(-50%,-50%) rotate(0deg);-o-transform: translate(-50%,-50%) rotate(0deg);
+		-ms-transform: translate(-50%,-50%) rotate(0deg);}
 	40% {transform: translate(-50%,-50%) rotate(-360deg);-webkit-transform: translate(-50%,-50%) rotate(-360deg);
-		-moz-transform: translate(-50%,-50%) rotate(-360deg);-o-transform: translate(-50%,-50%) rotate(-360deg);}
+		-moz-transform: translate(-50%,-50%) rotate(-360deg);-o-transform: translate(-50%,-50%) rotate(-360deg);
+		-ms-transform: translate(-50%,-50%) rotate(-360deg);}
 	50% {transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-webkit-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);
-		 -moz-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-o-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);}
+		 -moz-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-o-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);
+		 -ms-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);}
 	90% {transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);
-		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);}
+		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);
+		-ms-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);}
 	100% {transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);}
+		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
+		-ms-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);}
 	
 }
 
