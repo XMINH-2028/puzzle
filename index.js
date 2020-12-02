@@ -156,13 +156,19 @@ for (let i=0;i<$$('input').length;i++) {
 		setInterval(()=>{
 			if (dcheight<200) {
 				$('.bagua').classList.add('bgscale5');
+				$('.zero_mask').classList.add('zmscale5');
 				$('.bagua').classList.remove('bgscale2');
+				$('.zero_mask').classList.remove('zmscale2');
 			} else {
 				$('.bagua').classList.add('bgscale2');
 				$('.zero_mask').classList.add('zmscale2');
 				$('.bagua').classList.remove('bgscale5');
+				$('.zero_mask').classList.remove('zmscale5');
 			}
 		}) 
 		
 	})
 }
+
+
+

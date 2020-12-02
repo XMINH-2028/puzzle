@@ -25,6 +25,9 @@
 .zmscale2 {
 	height: 200%;
 }
+.zmscale5 {
+	height: 500%;
+}
 .bagua {
 	position: absolute;
 	top: 50%;
@@ -45,7 +48,7 @@
 }
 form {
 	position: absolute;
-	font-size: 14px;
+	font-size: 68%;
 	top:0;
 	display: none;
 	transition: 0.5s linear;
