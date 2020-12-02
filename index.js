@@ -3,7 +3,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 /*SET START WINDOW SIZE---*/
 var zerobg = 0;
-var dcwidth = window.innerWidth;
+/*var dcwidth = window.innerWidth;
 var dcheight = window.innerHeight;
 $('.zero').style.height = dcheight+'px';
 if (dcwidth > dcheight) {
@@ -16,16 +16,15 @@ if (dcwidth > dcheight) {
 }
 
 
-/*$('.bagua_mask').addEventListener('click',()=>{
+$('.bagua_mask').addEventListener('click',()=>{
 	$('.zero_mask').style.opacity = '0';
 	setTimeout(()=>{
 		$('.zero_mask').style.display = 'none';
 	},500)
 })*/
 setTimeout(setInterval(()=>{
-	dcwidth = window.innerWidth;
-	dcheight = window.innerHeight;
-	$('.zero').style.height = dcheight+'px';
+	var dcwidth = document.body.offsetWidth;
+	var dcheight = document.body.offsetHeight;
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
