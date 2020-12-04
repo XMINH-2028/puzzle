@@ -49,10 +49,12 @@
 	transition: 0.5s;
 }
 form {
+	height: 100%;
 	position: absolute;
 	top:0;
 	display: none;
 	transition: 0.5s linear;
+	background: black;
 }
 
 form input {
@@ -65,7 +67,31 @@ form input {
 form label {
 	color: white;
 }
+form p {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 80%;
+}
+form p input {
+	width: auto;
+	margin-right: 3px;
+}
+form button {
+	width: 50%;
+	background: white;
+	font-weight: bold;
+	font-size: 16px;
+	border: none;
+}
+form p:nth-of-type(1) {
+	margin-top:3px;
+}
 
+form p:nth-of-type(3) {
+	margin-top:5px;
+	justify-content: center;
+}
 .bagua_mask {
 	position: absolute;
 	width: 25%;
@@ -506,66 +532,50 @@ form label {
 	to {bottom:-50%;right:-50%;}
 }
 
-@media screen and (max-width: 680px) and (max-height: 1000px), (max-width: 1000px) and (max-height: 680px){
+@media screen and (max-width: 576px), (max-height: 576px) {
 	.bagua_child .yang {
 		font-size: 68%;
 	}
-	form {
+	form,p {
 		font-size: 68%;
 	}
-}
-@media screen and (max-width: 280px ) {
-	.bagua_child .yang {
-		font-size: 50%;
-	}
-	form {
-		font-size: 50%;
-	}
-	form input {
-		height: 7px !important;
-		font-size: 6px;
+	form button {
+	font-size: 12px;
 	}
 }
-@media screen and (max-height: 280px ) {
+@media screen and (max-width: 400px ) {
 	.bagua_child .yang {
 		font-size: 50% !important;
 	}
-	form {
+	form,p {
 		font-size: 50%;
 	}
 	form input {
 		height: 10px !important;
 		font-size: 8px;
 	}
+	form button {
+		font-size: 8px;
+	}
 }
 
-@media screen and (max-height: 200px ) {
-	form {
+@media screen and (max-width: 280px ) {
+	form,p {
 		font-size: 6px;
 	}
 	form input {
 		height: 8px !important;
-		font-size: 7px;
-	}
-	.bagua_child .yang {
-		font-size: 6px !important;
-	}
-}
-
-@media screen and (max-height: 180px ) {
-	form {
-		font-size: 4px;
-	}
-	form input {
-		height: 6px !important;
-		font-size: 5px;
+		font-size: 6px;
 	}
 	.bagua_child .yang {
 		font-size: 4px !important;
 	}
+	form button {
+		font-size: 6px;
+	}
 }
-@media screen and (max-height: 100px ) {
-	form {
+@media screen and (max-width: 100px ) {
+	form,p {
 		font-size: 3px;
 	}
 	form input {
@@ -574,5 +584,84 @@ form label {
 	}
 	.bagua_child .yang {
 		font-size: 3px !important;
+	}
+}
+@media screen and (max-height: 400px ) {
+	.bagua_child .yang {
+		font-size: 50% !important;
+	}
+	form,p {
+		font-size: 50%;
+	}
+	form input {
+		height: 10px !important;
+		font-size: 8px;
+	}
+	form button {
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-height: 280px ) {
+	form,p {
+		font-size: 6px;
+	}
+	form input {
+		height: 8px !important;
+		font-size: 6px;
+	}
+	.bagua_child .yang {
+		font-size: 4px !important;
+	}
+	form button {
+		font-size: 6px;
+	}
+}
+@media screen and (max-height: 210px ) {
+	form,p {
+		font-size: 3px;
+	}
+	form input {
+		height: 4px !important;
+		font-size: 3px;
+	}
+	.bagua_child .yang {
+		font-size: 3px !important;
+	}
+	form button {
+		font-size: 3px;
+	}
+	form p:nth-of-type(1) {
+		margin-top:1px;
+	}
+
+	form p:nth-of-type(3) {
+		margin-top:2px;
+	}
+}
+@media screen and (max-height: 128px ) {
+	form {
+		font-size: 2px;
+	}
+	form input {
+		height: 2px !important;
+		font-size: 2px;
+	}
+	.bagua_child .yang {
+		font-size: 2px !important;
+	}
+	form button {
+		font-size: 2px;
+		padding: 1px 0;
+	}
+	form button {
+		font-size: 2px;
+		padding: 1px 0;
+	}
+
+	form p input {
+		height: 3px !important;
+		font-size: 3px;
+		margin-right: 1px;
 	}
 }
