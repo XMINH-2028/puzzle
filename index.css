@@ -5,13 +5,14 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+body {
+	overflow: hidden;
+}
 .zero {
 	position: relative;	
 	overflow-x: hidden;
 }
-.zerohd {
-	overflow-y: hidden;
-}
+
 .zero_mask {
 	position: absolute;
 	background-image: radial-gradient(circle, white, silver, grey);
