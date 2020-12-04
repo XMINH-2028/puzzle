@@ -648,28 +648,6 @@ form p:nth-of-type(3) {
 	}
 	form button {
 		font-size: 2px;
-		padding: 1px 0;
-	}
-
-	form p input {
-		height: 3px !important;
-		font-size: 3px;
-		margin-right: 1px;
-	}
-}
-@media screen and (max-height: 70px),(max-width: 70px) {
-	form {
-		font-size: 2px;
-	}
-	form input {
-		height: 2px !important;
-		font-size: 2px;
-	}
-	.bagua_child .yang {
-		font-size: 2px !important;
-	}
-	form button {
-		font-size: 2px;
 		padding: 0;
 	}
 
@@ -679,10 +657,10 @@ form p:nth-of-type(3) {
 		margin-right: 1px;
 	}
 	form p:nth-of-type(1) {
-		margin-top: 0px;
+		margin-top:0px;
 	}
 
 	form p:nth-of-type(3) {
-		margin-top: 1px;
+		margin-top:0px;
 	}
 }
