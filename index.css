@@ -83,13 +83,14 @@ form button {
 	font-weight: bold;
 	font-size: 16px;
 	border: none;
+	padding: 2px 0;
 }
 form p:nth-of-type(1) {
-	margin-top:3px;
+	margin-top: 12px;
 }
 
 form p:nth-of-type(3) {
-	margin-top:5px;
+	margin-top:	35px;
 	justify-content: center;
 }
 .bagua_mask {
@@ -532,7 +533,24 @@ form p:nth-of-type(3) {
 	to {bottom:-50%;right:-50%;}
 }
 
+@media screen and (max-width: 650px), (max-height: 650px) {
+	.bagua_child .yang {
+		font-size: 80%;
+	}
+	form,p {
+		font-size: 80%;
+	}
+	form button {
+		font-size: 14px;
+	}
+}
+
 @media screen and (max-width: 576px), (max-height: 576px) {
+	form p:nth-of-type(3) {
+		margin-top:20px;
+	}
+}
+@media screen and (max-width: 500px), (max-height: 500px) {
 	.bagua_child .yang {
 		font-size: 68%;
 	}
@@ -540,10 +558,16 @@ form p:nth-of-type(3) {
 		font-size: 68%;
 	}
 	form button {
-	font-size: 12px;
+		font-size: 12px;
+	}
+	form p:nth-of-type(3) {
+		margin-top:5px;
+	}
+	form p:nth-of-type(1) {
+		margin-top:2px;
 	}
 }
-@media screen and (max-width: 400px ) {
+@media screen and (max-height: 400px ),(max-width: 400px) {
 	.bagua_child .yang {
 		font-size: 50% !important;
 	}
@@ -557,9 +581,16 @@ form p:nth-of-type(3) {
 	form button {
 		font-size: 8px;
 	}
+	form p:nth-of-type(1) {
+		margin-top: 2px;
+	}
+
+	form p:nth-of-type(3) {
+		margin-top: 4px;
+	}
 }
 
-@media screen and (max-width: 280px ) {
+@media screen and (max-height: 300px ),(max-width: 300px) {
 	form,p {
 		font-size: 6px;
 	}
@@ -568,56 +599,20 @@ form p:nth-of-type(3) {
 		font-size: 6px;
 	}
 	.bagua_child .yang {
-		font-size: 4px !important;
+		font-size: 6px !important;
 	}
 	form button {
 		font-size: 6px;
 	}
-}
-@media screen and (max-width: 100px ) {
-	form,p {
-		font-size: 3px;
+	form p:nth-of-type(1) {
+		margin-top:1px;
 	}
-	form input {
-		height: 4px !important;
-		font-size: 3px;
-	}
-	.bagua_child .yang {
-		font-size: 3px !important;
-	}
-}
-@media screen and (max-height: 400px ) {
-	.bagua_child .yang {
-		font-size: 50% !important;
-	}
-	form,p {
-		font-size: 50%;
-	}
-	form input {
-		height: 10px !important;
-		font-size: 8px;
-	}
-	form button {
-		font-size: 8px;
-	}
-}
 
-@media screen and (max-height: 280px ) {
-	form,p {
-		font-size: 6px;
-	}
-	form input {
-		height: 8px !important;
-		font-size: 6px;
-	}
-	.bagua_child .yang {
-		font-size: 4px !important;
-	}
-	form button {
-		font-size: 6px;
+	form p:nth-of-type(3) {
+		margin-top:3px;
 	}
 }
-@media screen and (max-height: 210px ) {
+@media screen and (max-height: 210px ),(max-width: 210px) {
 	form,p {
 		font-size: 3px;
 	}
@@ -639,7 +634,7 @@ form p:nth-of-type(3) {
 		margin-top:2px;
 	}
 }
-@media screen and (max-height: 128px) {
+@media screen and (max-height: 128px),(max-width: 128px) {
 	form {
 		font-size: 2px;
 	}
@@ -661,7 +656,7 @@ form p:nth-of-type(3) {
 		margin-right: 1px;
 	}
 }
-@media screen and (max-height: 70px ) {
+@media screen and (max-height: 70px),(max-width: 70px) {
 	form {
 		font-size: 2px;
 	}

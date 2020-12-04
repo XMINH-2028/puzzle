@@ -22,9 +22,13 @@ if (dcwidth > dcheight) {
 		$('.zero_mask').style.display = 'none';
 	},500)
 })*/
+setInterval(()=>{
+		console.log(dcwidth,dcheight);
+	},1000)
 setTimeout(setInterval(()=>{
 	dcwidth = window.innerWidth;
 	dcheight = window.innerHeight;
+	
 	$('.zero').style.height = dcheight+'px';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
