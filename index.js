@@ -3,17 +3,6 @@ const $$ = document.querySelectorAll.bind(document);
 
 /*SET START WINDOW SIZE---*/
 var zerobg = 0;
-var dcwidth = window.innerWidth;
-var dcheight = window.innerHeight;
-$('.zero').style.height = dcheight+'px';
-if (dcwidth > dcheight) {
-	$('.bagua').style.height = 0.9*dcheight+'px';
-	$('.bagua').style.width = 0.9*dcheight+'px';
-	
-} else {
-	$('.bagua').style.height = 0.9*dcwidth+'px';
-	$('.bagua').style.width = 0.9*dcwidth+'px';
-}
 
 
 /*$('.bagua_mask').addEventListener('click',()=>{
@@ -26,8 +15,8 @@ setInterval(()=>{
 		console.log(dcwidth,dcheight);
 	},1000)
 setTimeout(setInterval(()=>{
-	dcwidth = window.innerWidth;
-	dcheight = window.innerHeight;
+	dcwidth = document.body.offsetWidth;
+	dcheight = document.body.offsetHeight;
 	
 	$('.zero').style.height = dcheight+'px';
 	if (dcwidth > dcheight) {
@@ -157,6 +146,7 @@ $('.signup').addEventListener('click',()=>{
 
 for (let i=0;i<$$('input').length;i++) {
 	$$('input')[i].addEventListener('focus',()=>{
+		$('.zero').classList.remove('zerohdy');
 		setInterval(()=>{
 			if (dcheight<180 ) {
 				$('.bagua').classList.add('bgscale5');

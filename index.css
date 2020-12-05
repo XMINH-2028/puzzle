@@ -6,13 +6,16 @@
 	-webkit-box-sizing: border-box;
 }
 body {
-	overflow: hidden;
+	overflow: hidden; 
 }
 .zero {
 	position: relative;	
 	overflow-x: hidden;
+	height: 100vh;
 }
-
+.zerohdy {
+	overflow-y: hidden;
+}
 .zero_mask {
 	position: absolute;
 	background-image: radial-gradient(circle, white, silver, grey);
@@ -43,10 +46,18 @@ body {
 }
 .bgscale2 {
 	transform: translate(-50%,-50%) scale(2);
+	-webkit-transform: translate(-50%,-50%) scale(2);
+	-o-transform: translate(-50%,-50%) scale(2);
+	-moz-transform: translate(-50%,-50%) scale(2);
+	-ms-transform: translate(-50%,-50%) scale(2);
 	transition: 0.5s;
 }
 .bgscale5 {
 	transform: translate(-50%,-50%) scale(5);
+	-webkit-transform: translate(-50%,-50%) scale(5);
+	-moz-transform: translate(-50%,-50%) scale(5);
+	-o-transform: translate(-50%,-50%) scale(5);
+	-ms-transform: translate(-50%,-50%) scale(5);
 	transition: 0.5s;
 }
 form {
