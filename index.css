@@ -111,13 +111,8 @@ form p:nth-of-type(3) {
 	position: absolute;
 	width: 25%;
 	height:25%;
-	top: 50%;
-	left:50%;
-	transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	-o-transform: translate(-50%,-50%);
-	-moz-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
+	top: 37.5%;
+	left:37.5%;
 	cursor: pointer;
 }
 .bmrotate {
@@ -269,13 +264,8 @@ form p:nth-of-type(3) {
 	position: absolute;
 	width: 25%;
 	height: 25%;
-	top: 50%;
-	left:50%;
-	transform: translate(-50%,-50%);
-	-o-transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	-moz-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
+	top: 37.5%;
+	left:37.5%;
 	background-image: url('images/yangyin2.png');
 	background-size: cover;
 	background-position: center;
@@ -508,25 +498,25 @@ form p:nth-of-type(3) {
 		-moz-transform: translate(-50%,-50%) scale(0);}
 }
 @keyframes fcscale {
-	0% {transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-ms-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);}
-	40% {transform: translate(-50%,-50%) rotate(-360deg) rotateY(0deg);
-		-webkit-transform: translate(-50%,-50%) rotate(-360deg) rotateY(0deg);
-		-moz-transform: translate(-50%,-50%) rotate(-360deg) rotateY(0deg);
-		-o-transform: translate(-50%,-50%) rotate(-360deg) rotateY(0deg);
-		-ms-transform: translate(-50%,-50%) rotate(-360deg) rotateY(0deg);}
-	50% {transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-webkit-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);
-		 -moz-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);-o-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);
-		 -ms-transform: translate(-50%,-50%) rotate(-360deg) rotateY(180deg);}
-	90% {transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);
-		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);
-		-ms-transform: translate(-50%,-50%) rotate(0deg) rotateY(180deg);}
-	100% {transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-webkit-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-o-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);-moz-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);
-		-ms-transform: translate(-50%,-50%) rotate(0deg) rotateY(0deg);}
+	0% {transform: rotate(0deg) rotateY(0deg);
+		-webkit-transform: rotate(0deg) rotateY(0deg);
+		-moz-transform: rotate(0deg) rotateY(0deg);
+		-o-transform: rotate(0deg) rotateY(0deg);
+		-ms-transform: rotate(0deg) rotateY(0deg);}
+	40% {transform: rotate(-360deg) rotateY(0deg);
+		-webkit-transform: rotate(-360deg) rotateY(0deg);
+		-moz-transform: rotate(-360deg) rotateY(0deg);
+		-o-transform: rotate(-360deg) rotateY(0deg);
+		-ms-transform: rotate(-360deg) rotateY(0deg);}
+	50% {transform: rotate(-360deg) rotateY(180deg);-webkit-transform: rotate(-360deg) rotateY(180deg);
+		 -moz-transform: rotate(-360deg) rotateY(180deg);-o-transform: rotate(-360deg) rotateY(180deg);
+		 -ms-transform: rotate(-360deg) rotateY(180deg);}
+	90% {transform: rotate(0deg) rotateY(180deg);-webkit-transform: rotate(0deg) rotateY(180deg);
+		-o-transform: rotate(0deg) rotateY(180deg);-moz-transform: rotate(0deg) rotateY(180deg);
+		-ms-transform: rotate(0deg) rotateY(180deg);}
+	100% {transform: rotate(0deg) rotateY(0deg);-webkit-transform: rotate(0deg) rotateY(0deg);
+		-o-transform: rotate(0deg) rotateY(0deg);-moz-transform: rotate(0deg) rotateY(0deg);
+		-ms-transform: rotate(0deg) rotateY(0deg);}
 	
 }
 
