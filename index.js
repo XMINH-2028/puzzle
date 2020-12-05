@@ -17,8 +17,6 @@ setInterval(()=>{
 setTimeout(setInterval(()=>{
 	dcwidth = document.body.offsetWidth;
 	dcheight = document.body.offsetHeight;
-	
-	$('.zero').style.height = dcheight+'px';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
