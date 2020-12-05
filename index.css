@@ -116,10 +116,10 @@ form p:nth-of-type(3) {
 	cursor: pointer;
 }
 .bmrotate {
-	animation: fcscale 6s linear infinite;
-	-webkit-animation: fcscale 6s linear infinite;
-	-o-animation: fcscale 6s linear infinite;
-	-moz-animation: fcscale 6s linear infinite;
+	animation: fcscale 6s infinite linear;
+	-webkit-animation: fcscale 6s infinite linear;
+	-o-animation: fcscale 6s infinite linear;
+	-moz-animation: fcscale 6s infinite linear;
 }
 .balance {
 	width: 46% !important;

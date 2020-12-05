@@ -125,12 +125,6 @@ for (let i=0;i<$$('.four_symbols').length;i++) {
 }
 
 /*SIGN---*/
-var animate_time = 0;
-function animateTime() {
-	animate_time +=1 ;
-	if (animate_time === 60) {animate_time = 0;}
-}
-var anT = setInterval(animateTime,100);
 $('.signup').addEventListener('click',()=>{
 	$('.bagua_mask').classList.remove('bmrotate');
 	$('.bagua_mask').classList.add('balance');
