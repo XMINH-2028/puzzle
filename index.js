@@ -21,7 +21,7 @@ setTimeout(setInterval(()=>{
 			$('.zero_mask').style.height = "280px";
 			$('.zero').style.overflowY = "scroll";
 		} else {
-			dcsize = dcwidth >= dcheight ? dcheight : dcwidth;
+			dcsize = dcheight;
 			$('.zero_mask').style.height = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
@@ -52,7 +52,7 @@ setTimeout(setInterval(()=>{
 			$('.zero_mask').style.width = "280px";
 			$('.zero').style.overflowX = "scroll";
 		} else {
-			dcsize = dcwidth >= dcheight ? dcheight : dcwidth;
+			dcsize = dcwidth;
 			$('.zero_mask').style.width = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
@@ -145,13 +145,18 @@ $('.signup').addEventListener('click',()=>{
 	$('.bagua_mask .the-second').classList.add('balance_child1');
 	$('.bagua_mask .the-third').classList.add('balance_child1');
 	$('.bagua_mask .the-first').classList.add('balance_child2');
-	
-		$('.zero_mask').classList.add('zmscale2');
-		$('.zero_bg').classList.add('zmscale2');
-		$('.zero').style.overflowY = 'scroll';
 	 
 	setTimeout(()=>{
 		$('.bagua_mask form').style.display = "block";
+		$('form').addEventListener('click',(e)=>{
+				$('form').classList.add('foscale2');
+		})
+		$('body').addEventListener('click',(e)=>{
+			if (e.target.classList.contains('zero_mask')) {
+				$('form').classList.remove('foscale2');
+			}
+		})
+		
 	},1000)			
 })
 

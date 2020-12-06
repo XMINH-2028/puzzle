@@ -31,15 +31,6 @@
 	left:0;
 	transition: opacity 0.5s;	
 }
-.zmscale2 {
-	transform: scale(2);
-	-webkit-transform: scale(2);
-	-o-transform: scale(2);
-	-moz-transform: scale(2);
-	-ms-transform: scale(2);
-	transition: transform 1s;
-	transform-origin: top center;
-}
 
 .bagua {
 	position: absolute;
@@ -60,6 +51,15 @@ form {
 	display: none;
 	transition: 0.5s linear;
 	background: black;
+	transform-origin: center center;
+}
+.foscale2 {
+	transform: scale(1.98);
+	-webkit-transform: scale(1.98);
+	-o-transform: scale(1.98);
+	-moz-transform: scale(1.98);
+	-ms-transform: scale(1.98);
+	transition: transform 1s;
 }
 form div {
 	height: 15%;
