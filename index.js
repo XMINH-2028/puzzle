@@ -23,6 +23,7 @@ setTimeout(setInterval(()=>{
 		} else {
 			dcsize = dcheight;
 			$('.zero_mask').style.height = "100%";
+			$('.zero_mask').style.width = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
@@ -54,6 +55,7 @@ setTimeout(setInterval(()=>{
 		} else {
 			dcsize = dcwidth;
 			$('.zero_mask').style.width = "100%";
+			$('.zero_mask').style.height = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
