@@ -564,6 +564,9 @@ form p:nth-of-type(3) {
 	form p:nth-of-type(3) {
 		margin-top:5px;
 	}
+	form p:nth-of-type(2) {
+		margin-top:	1px;
+	}
 	form p:nth-of-type(1) {
 		margin-top:2px;
 	}
@@ -585,6 +588,28 @@ form p:nth-of-type(3) {
 	
 }
 @media screen and (max-height: 340px ),(max-width: 340px) {
+	.bagua_child .yang {
+		font-size: 50% !important;
+	}
+	form,p {
+		font-size: 50%;
+	}
+	form input {
+		height: 10px !important;
+		font-size: 9px;
+	}
+	form button {
+		font-size: 9px;
+	}
+	form p:nth-of-type(1) {
+		margin-top: 2px;
+	}
+
+	form p:nth-of-type(3) {
+		margin-top: 4px;
+	}
+}
+@media screen and (max-height: 320px ),(max-width: 320px) {
 	.bagua_child .yang {
 		font-size: 50% !important;
 	}
