@@ -570,13 +570,29 @@ form p:nth-of-type(3) {
 }
 @media screen and (max-height: 400px ),(max-width: 400px) {
 	.bagua_child .yang {
+		font-size: 60% !important;
+	}
+	form,p {
+		font-size: 60%;
+	}
+	form input {
+		height: 12px !important;
+		font-size: 10px;
+	}
+	form button {
+		font-size: 10px;
+	}
+	
+}
+@media screen and (max-height: 340px ),(max-width: 340px) {
+	.bagua_child .yang {
 		font-size: 50% !important;
 	}
 	form,p {
 		font-size: 50%;
 	}
 	form input {
-		height: 10px !important;
+		height: 9px !important;
 		font-size: 8px;
 	}
 	form button {
@@ -593,17 +609,17 @@ form p:nth-of-type(3) {
 
 @media screen and (max-height: 300px ),(max-width: 300px) {
 	form,p {
-		font-size: 6px;
+		font-size: 7px;
 	}
 	form input {
 		height: 8px !important;
-		font-size: 6px;
+		font-size: 7px;
 	}
 	.bagua_child .yang {
-		font-size: 6px !important;
+		font-size: 7px !important;
 	}
 	form button {
-		font-size: 6px;
+		font-size: 7px;
 	}
 	form p:nth-of-type(1) {
 		margin-top:1px;
