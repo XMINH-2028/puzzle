@@ -150,6 +150,7 @@ $('.signup').addEventListener('click',()=>{
 	 
 	setTimeout(()=>{
 		$('.bagua_mask form').style.display = "block";
+		$('.bagua_mask .the-first').style.display = "none";
 		$('form').addEventListener('click',(e)=>{
 				$('form').classList.add('foscale2');
 		})
