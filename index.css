@@ -576,7 +576,7 @@ form p:nth-of-type(3) {
 		font-size: 60%;
 	}
 	form input {
-		height: 12px !important;
+		height: 11px !important;
 		font-size: 10px;
 	}
 	form button {
