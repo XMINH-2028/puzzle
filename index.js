@@ -11,11 +11,10 @@ var zerobg = 0;
 		$('.zero_mask').style.display = 'none';
 	},500)
 })*/
-
+var dcsize;
 setTimeout(setInterval(()=>{
 	var dcwidth = document.body.offsetWidth;
 	var dcheight = document.body.offsetHeight;
-	var dcsize;
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			dcsize ="280";
@@ -24,7 +23,6 @@ setTimeout(setInterval(()=>{
 		} else {
 			dcsize = dcwidth >= dcheight ? dcheight : dcwidth;
 			$('.zero_mask').style.height = "100%";
-			$('.zero').style.overflowY = "hidden";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
@@ -56,7 +54,6 @@ setTimeout(setInterval(()=>{
 		} else {
 			dcsize = dcwidth >= dcheight ? dcheight : dcwidth;
 			$('.zero_mask').style.width = "100%";
-			$('.zero').style.overflowX = "hidden";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
@@ -148,6 +145,11 @@ $('.signup').addEventListener('click',()=>{
 	$('.bagua_mask .the-second').classList.add('balance_child1');
 	$('.bagua_mask .the-third').classList.add('balance_child1');
 	$('.bagua_mask .the-first').classList.add('balance_child2');
+	
+		$('.zero_mask').classList.add('zmscale2');
+		$('.zero_bg').classList.add('zmscale2');
+		$('.zero').style.overflowY = 'scroll';
+	 
 	setTimeout(()=>{
 		$('.bagua_mask form').style.display = "block";
 	},1000)			
