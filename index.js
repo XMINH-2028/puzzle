@@ -35,8 +35,8 @@ function sign_layout() {
 	}
 }
 function game_layout() {
-	dcwidth = window.innerWidth;
-	dcheight = window.innerHeight;
+	dcwidth = document.body.offsetWidth;
+	dcheight = document.body.offsetHeight;
 	$('.zero').style.height = dcheight;
 	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
