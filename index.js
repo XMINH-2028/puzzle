@@ -11,24 +11,24 @@ function sign_layout() {
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			dcsize ="280";
-			$('.zero_mask').style.height = "280px";
+			$('.signlayout').style.height = "280px";
 			$('.zero').style.overflowY = "scroll";
 		} else {
 			dcsize = dcheight;
-			$('.zero_mask').style.height = "100%";
-			$('.zero_mask').style.width = "100%";
+			$('.signlayout').style.height = "100%";
+			$('.signlayout').style.width = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	} else {
 		if (dcwidth < 280) {
 			dcsize ="280";
-			$('.zero_mask').style.width = "280px";
+			$('.signlayout').style.width = "280px";
 			$('.zero').style.overflowX = "scroll";
 		} else {
 			dcsize = dcwidth;
-			$('.zero_mask').style.width = "100%";
-			$('.zero_mask').style.height = "100%";
+			$('.signlayout').style.width = "100%";
+			$('.signlayout').style.height = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
@@ -131,7 +131,7 @@ for (let i=0;i<$$('.sign').length;i++) {
 		$$('form')[i].classList.add('foscale2');
 	})
 	$('body').addEventListener('click',(e)=>{
-		if (e.target.classList.contains('zero_mask')) {
+		if (e.target.classList.contains('signlayout')) {
 			$$('form')[i].classList.remove('foscale2');
 		}
 	})
@@ -192,7 +192,7 @@ var gs_text = `<div class="dragon">
 for (let i=0;i<$$('.submit').length;i++) {
 	$$('.submit')[i].addEventListener('click',()=>{
 		$('.gamelayout').innerHTML = gs_text ;
-		$('.zero_mask').style.opacity = '0';
+		$('.signlayout').style.opacity = '0';
 		$('.zero_bg').style.opacity = '0';
 		game_layout();
 		game_time = 1;
