@@ -37,7 +37,8 @@ function sign_layout() {
 function game_layout() {
 	dcwidth = window.innerWidth;
 	dcheight = window.innerHeight;
-	$('.zero').style.height = dcheight
+	$('.zero').style.height = dcheight;
+	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
