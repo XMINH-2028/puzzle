@@ -11,24 +11,24 @@ function sign_layout() {
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			dcsize ="280";
-			$('.zero_mask').style.height = "280px";
+			$('.signlayout').style.height = "280px";
 			$('.zero').style.overflowY = "scroll";
 		} else {
 			dcsize = dcheight;
-			$('.zero_mask').style.height = "100%";
-			$('.zero_mask').style.width = "100%";
+			$('.signlayout').style.height = "100%";
+			$('.signlayout').style.width = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	} else {
 		if (dcwidth < 280) {
 			dcsize ="280";
-			$('.zero_mask').style.width = "280px";
+			$('.signlayout').style.width = "280px";
 			$('.zero').style.overflowX = "scroll";
 		} else {
 			dcsize = dcwidth;
-			$('.zero_mask').style.width = "100%";
-			$('.zero_mask').style.height = "100%";
+			$('.signlayout').style.width = "100%";
+			$('.signlayout').style.height = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
