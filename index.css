@@ -14,6 +14,10 @@
 	overflow: hidden;
 	transform-origin: center;
 }	
+.gamelayout,.signlayout {
+	width: 100%;
+	height: 100%;
+}
 .zero_bg {
 	position: fixed;
 	background-image: radial-gradient(circle, white, silver, grey);
@@ -21,6 +25,7 @@
 	height: 100vh;
 	top:0;
 	left:0;
+	transition: opacity 1s;
 }
 .zero_mask {
 	position: absolute;
@@ -28,7 +33,7 @@
 	height: 100%;
 	top:0;
 	left:0;
-	transition: opacity 0.5s;	
+	transition: opacity 1s;	
 }
 
 .bagua {
@@ -111,6 +116,19 @@ form p:nth-of-type(3) {
 	margin-top:	20px;
 	justify-content: center;
 }
+#sign_in div {
+	height: 20%;
+}
+#sign_in div:last-child {
+	height: 40%;
+}
+#sign_in input {
+	height: 38%;
+}
+#sign_in p input {
+	height: auto;
+}
+
 .bagua_mask {
 	position: absolute;
 	width: 25%;
@@ -169,7 +187,10 @@ form p:nth-of-type(3) {
 	align-items: center;
 	color: #fff;
 }
-
+.yang_active {
+	background: white !important;
+	color: black !important;
+}
 .sky .yang {
 	cursor: pointer;
 }
