@@ -14,13 +14,19 @@
 	overflow: hidden;
 	transform-origin: center;
 }	
-.gamelayout,.signlayout {
+.gamelayout {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top:0;
 	left:0;
-	overflow: hidden;
+}
+.signlayout {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
 }
 .zero_bg {
 	position: fixed;
