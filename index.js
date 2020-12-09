@@ -154,6 +154,16 @@ for (let i=0;i<$$('.sign').length;i++) {
 	})
 	
 }
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
 
 var gs_text = `<div class="dragon">
 				<div class="four_symbols dragon_child">
@@ -200,6 +210,7 @@ for (let i=0;i<$$('.submit').length;i++) {
 			$('.signlayout').innerHTML = '';
 			$('.signlayout').style.display = 'none';
 			$('.zero_bg').style.display = 'none';
+			openFullscreen();
 			choosegame();
 			sign_time=0;
 		},1000)
