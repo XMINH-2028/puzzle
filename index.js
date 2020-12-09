@@ -11,24 +11,24 @@ function sign_layout() {
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			dcsize ="280";
-			$('.signlayout').style.height = "280px";
+			$('.zero_mask').style.height = "280px";
 			$('.zero').style.overflowY = "scroll";
 		} else {
 			dcsize = dcheight;
-			$('.signlayout').style.height = "100%";
-			$('.signlayout').style.width = "100%";
+			$('.zero_mask').style.height = "100%";
+			$('.zero_mask').style.width = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	} else {
 		if (dcwidth < 280) {
 			dcsize ="280";
-			$('.signlayout').style.width = "280px";
+			$('.zero_mask').style.width = "280px";
 			$('.zero').style.overflowX = "scroll";
 		} else {
 			dcsize = dcwidth;
-			$('.signlayout').style.width = "100%";
-			$('.signlayout').style.height = "100%";
+			$('.zero_mask').style.width = "100%";
+			$('.zero_mask').style.height = "100%";
 		}
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
@@ -37,7 +37,7 @@ function sign_layout() {
 function game_layout() {
 	dcwidth = window.innerWidth;
 	dcheight = window.innerHeight;
-	$('.zero').style.height = dcheight;
+	$('.zero').style.height = dcheight
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
