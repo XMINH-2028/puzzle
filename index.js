@@ -163,6 +163,9 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
+  for (let i=0;i<$$('.four_symbols').length;i++) {
+		$$('.four_symbols')[i].classList.add('fs_scale');
+	}
 }
 
 var gs_text = `<div class="dragon">

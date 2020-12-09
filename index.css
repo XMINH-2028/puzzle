@@ -504,6 +504,13 @@ form p:nth-of-type(3) {
 .turtle_child .yangyin {
 	background: black;
 }
+.fs_scale {
+	transform: scale(1);
+	-o-transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+}
 .four_symbols:hover {
 	transform: scale(1.2);
 	-o-transform: scale(1.2);
