@@ -2,9 +2,28 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 
+
+
 /*SET START WINDOW SIZE---*/
 var zerobg = 0;
 var dcsize,dcwidth,dcheight;
+
+function getSize() {
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    dcwidth = window.innerWidth;
+    dcheight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    dcwidth = document.documentElement.clientWidth;
+    dcheight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    dcwidth = document.body.clientWidth;
+    dcheight = document.body.clientHeight;
+  }
+}
+
 function sign_layout() {
 	dcwidth = document.body.offsetWidth;
 	dcheight = document.body.offsetHeight;
@@ -35,8 +54,8 @@ function sign_layout() {
 	}
 }
 function game_layout() {
-	dcwidth = document.body.offsetWidth;
-	dcheight = document.body.offsetHeight;
+	getSize();
+	$('.zero').style.height = dcheight+'px';
 	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
@@ -160,6 +179,8 @@ function openFullscreen() {
   } else if (elem.webkitRequestFullscreen) { /* Safari */
     elem.webkitRequestFullscreen();
   } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  } else if (elem.oRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
 }
