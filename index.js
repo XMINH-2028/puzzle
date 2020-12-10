@@ -25,8 +25,8 @@ function getSize() {
 }
 
 function sign_layout() {
-	dcwidth = document.body.offsetWidth;
-	dcheight = document.body.offsetHeight;
+	getSize();
+	$('.zero').style.height = dcheight+'px';
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			dcsize ="280";
