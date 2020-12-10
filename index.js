@@ -230,7 +230,7 @@ for (let i=0;i<$$('.submit').length;i++) {
 			$('.signlayout').innerHTML = '';
 			$('.signlayout').style.display = 'none';
 			$('.zero_bg').style.display = 'none';
-			openFullscreen();
+			
 			choosegame();
 			sign_time=0;
 		},1000)
