@@ -6,7 +6,6 @@ const $$ = document.querySelectorAll.bind(document);
 var zerobg = 0;
 var dcsize,dcwidth,dcheight;
 function sign_layout() {
-	$('.zero').style.height = '100vh';
 	dcwidth = document.body.offsetWidth;
 	dcheight = document.body.offsetHeight;
 	if (dcwidth > dcheight) {
@@ -36,10 +35,8 @@ function sign_layout() {
 	}
 }
 function game_layout() {
-	dcwidth = window.innerWidth;
-	dcheight = window.innerHeight;
-	$('.zero').style.height = dcheight+'px';
-	$('.zero').style.width = dcwidth+'px';
+	dcwidth = document.body.offsetWidth;
+	dcheight = document.body.offsetHeight;
 	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
