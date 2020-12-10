@@ -27,6 +27,7 @@ function getSize() {
 function sign_layout() {
 	getSize();
 	$('.zero').style.height = dcheight+'px';
+	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			dcsize ="280";
