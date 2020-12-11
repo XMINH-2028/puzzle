@@ -6,7 +6,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 /*SET START WINDOW SIZE---*/
 var zerobg = 0;
-var dcsize,dcwidth,dcheight;
+var dcsize,dcwidth,dcheight,savewidth,saveheight,savesize;
 
 function getSize() {
   if( typeof( window.innerWidth ) == 'number' ) {
@@ -25,15 +25,20 @@ function getSize() {
 }
 
 function sign_layout() {
-	getSize();
-	$('.zero').style.height = dcheight+'px';
-	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
+		$('.zero').style.width = dcwidth+'px';
 		if (dcheight < 280) {
-			dcsize ="280";
+			$('.zero').style.height = '280px';
+			savewidth = dcwidth;
+			saveheight = 280;
+			savesize = 280;
+			dcsize =280;
 			$('.signlayout').style.height = "280px";
-			$('.zero').style.overflowY = "scroll";
 		} else {
+			$('.zero').style.height = dcheight+'px';
+			savewidth = dcwidth;
+			saveheight = dcheight;
+			savesize = dcheight;
 			dcsize = dcheight;
 			$('.signlayout').style.height = "100%";
 			$('.signlayout').style.width = "100%";
@@ -41,12 +46,19 @@ function sign_layout() {
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	} else {
+		$('.zero').style.height = dcheight+'px';
+			saveheight = dcheight;
 		if (dcwidth < 280) {
-			dcsize ="280";
+			savewidth = 280;
+			savesize = 280;
+			dcsize =280;
+			$('.zero').style.width = '280px';
 			$('.signlayout').style.width = "280px";
-			$('.zero').style.overflowX = "scroll";
 		} else {
+			savewidth = dcwidth;
+			savesize = dcwidth;
 			dcsize = dcwidth;
+			$('.zero').style.width = dcwidth+'px';
 			$('.signlayout').style.width = "100%";
 			$('.signlayout').style.height = "100%";
 		}
@@ -54,10 +66,17 @@ function sign_layout() {
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	}
 }
+function sign_zoom() {
+	$('.zero').style.width = savewidth+'px';
+	$('.zero').style.height = saveheight+'px';
+	dcsize = savesize;
+	$('.signlayout').style.height = "100%";
+	$('.signlayout').style.width = "100%";	
+	$('.bagua').style.height = 0.9*dcsize+'px';
+	$('.bagua').style.width = 0.9*dcsize+'px';
+}
 function game_layout() {
-	getSize();
 	$('.zero').style.height = dcheight+'px';
-	$('.zero').style.overflow = 'hidden';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
@@ -105,14 +124,18 @@ function game_layout() {
 
 var sign_time=1;
 var game_time=0;
+getSize();
 sign_layout();
-
+console.log(1,dcwidth,savewidth,dcheight,saveheight);
 	window.addEventListener('resize',()=>{
-		if (game_time===1) {
-			game_layout();
-		}
-		if (sign_time===1) {
+		getSize();
+		var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
+		if (((math<=2) && (dcwidth!=savewidth) && (dcheight!=saveheight))||((math===0) && (dcwidth===savewidth) && (dcheight===saveheight)) ) {
+			sign_zoom();
+			console.log(0);
+		} else {
 			sign_layout();
+			console.log(1,dcwidth,savewidth,dcheight,saveheight);
 		}
 	})
 
