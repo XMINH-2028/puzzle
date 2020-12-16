@@ -48,12 +48,20 @@ function getScrollbarWidth() {
 
 function sign_layout() {
 	if (signzoom!==0) {
-		changeheigth=dcheight;
-		changewidth=dcwidth;
-		dcwidth=Number((dcwidth*signzoom).toFixed(0));
-		dcheight=Number((dcheight*signzoom).toFixed(0));
-		saveheight = dcheight;
-		savewidth = dcwidth;
+		if (dcheight!==changeheight) {
+			changeheigth = dcheight;
+			dcheight=Number((dcheight*signzoom).toFixed(0));
+			saveheight = dcheight;
+		} else {
+			dcheight = saveheight;
+		}
+		if (dcwidth!==changewidth) {
+			changewidth = dcwidth;
+			dcwidth=Number((dcwidth*signzoom).toFixed(0));
+			savewidth = dcwidth;
+		} else {
+			dcwidth = savewidth;	
+		}
 	}
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
@@ -109,7 +117,7 @@ function sign_layout() {
 	}
 }
 function sign_zoom() {
-	changeheigth=dcheight;
+	changeheight=dcheight;
 	changewidth=dcwidth;
 	$('.zero').style.width = savewidth+'px';
 	$('.zero').style.height = saveheight+'px';
@@ -170,27 +178,29 @@ var sign_time=1;
 var game_time=0;
 getSize();
 signzoom=0;
-changeheigth=dcheight;
+changeheight=dcheight;
 changewidth=dcwidth;
 sign_layout();
 
 window.addEventListener('resize',()=>{
 		getSize();
 		var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
-		if (math<=2) {
-			if ((dcwidth!==savewidth) && (dcheight!==saveheight) && (dcwidth!==changewidth) && (dcheight!==changeheigth)) {
-				signzoom = Number((savewidth/dcwidth).toFixed(2));
+		if (math<=10 && (dcheight-changeheight)!==0 && (dcwidth-changewidth)!==0) {
+			if ((Math.abs(dcwidth-savewidth)>parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)>parseInt(0.05*saveheight))) {
+				signzoom = Number((savewidth/dcwidth).toFixed(4));
 				sign_zoom();
-				console.log(0,dcwidth,savewidth,dcheight,saveheight,signzoom);
-			} else if ((signzoom!=0) && (dcwidth===savewidth) && (dcheight===saveheight)) {
+				console.log(0,dcwidth,savewidth,dcheight,saveheight,signzoom,changeheight,changewidth);
+			} else if ((signzoom!=0) && (Math.abs(dcwidth-savewidth)<=parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)<=parseInt(0.05*saveheight))) {
+				savewidth=dcwidth;
+				saveheight=dcheight;
 				sign_zoom();
 				signzoom = 0;
+				sign_layout();
 				console.log(1,dcwidth,savewidth,dcheight,saveheight,signzoom);
 			}
-			
 		} else {
 			sign_layout();
-			console.log(2,dcwidth,savewidth,dcheight,saveheight,signzoom);
+			console.log(2,dcwidth,savewidth,dcheight,saveheight,signzoom,changeheight,changewidth);
 		}
 	})
 
