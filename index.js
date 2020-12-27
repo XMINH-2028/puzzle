@@ -20,6 +20,13 @@ function getSize() {
     dcwidth = document.body.clientWidth;
     dcheight = document.body.clientHeight;
   }
+  
+  if (window.innerWidth>window.outerWidth || window.innerHeight>window.outerHeight) {
+  	dcwidth = window.outerWidth;
+  	dcheight = window.outerHeight;
+  }
+  console.log(dcheight,dcwidth);
+
 }
 
 
@@ -68,7 +75,9 @@ function sign_layout() {
 			$('.zero').style.height = '280px';
 			$('.zero').style.width = dcwidth-getScrollbarWidth()+'px';
 			if (signzoom===0) {
+				changewidth = dcwidth;
 				savewidth = dcwidth;
+				changeheigth = 280;
 				saveheight = 280;
 				savesize = 280;
 			}
@@ -78,6 +87,8 @@ function sign_layout() {
 			$('.zero').style.height = dcheight+'px';
 			$('.zero').style.width = dcwidth+'px';
 			if (signzoom===0) {
+				changeheight = dcheight;
+				changewidth = dcwidth;
 				savewidth = dcwidth;
 				saveheight = dcheight;
 				savesize = dcheight;
@@ -91,9 +102,11 @@ function sign_layout() {
 	} else {
 		if (signzoom===0) {
 			saveheight = dcheight;
+			changeheight = dcheight;
 		}	
 		if (dcwidth < 280) {
 			if (signzoom===0) {
+				changewidth = 280;
 				savewidth = 280;
 				savesize = 280;
 			}
@@ -103,6 +116,7 @@ function sign_layout() {
 			$('.signlayout').style.width = "280px";
 		} else {
 			if (signzoom===0) {
+				changewidth = dcwidth;
 				savewidth = dcwidth;
 				savesize = dcwidth;
 			}
@@ -184,24 +198,41 @@ sign_layout();
 
 window.addEventListener('resize',()=>{
 		getSize();
+		var reheight = dcheight - changeheight;
+		var rewidth = dcwidth - changewidth;
 		var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
-		if (math<=10 && (dcheight-changeheight)!==0 && (dcwidth-changewidth)!==0) {
+		console.log(math,reheight,rewidth);
+		if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
+			if (math<=2) {
+				signzoom = Number((savewidth/dcwidth).toFixed(4));
+				sign_zoom();
+				console.log(0,reheight,rewidth,signzoom); 
+			} else {
+				sign_layout();
+				console.log(1,reheight,rewidth,signzoom);
+			}
+		} else {
+			sign_layout();
+			console.log(2,reheight,rewidth,signzoom);
+		}	
+		
+		/*if (math<=10 && ((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
 			if ((Math.abs(dcwidth-savewidth)>parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)>parseInt(0.05*saveheight))) {
 				signzoom = Number((savewidth/dcwidth).toFixed(4));
 				sign_zoom();
-				console.log(0,dcwidth,savewidth,dcheight,saveheight,signzoom,changeheight,changewidth);
+				console.log(0,reheight,rewidth); 
 			} else if ((signzoom!=0) && (Math.abs(dcwidth-savewidth)<=parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)<=parseInt(0.05*saveheight))) {
 				savewidth=dcwidth;
 				saveheight=dcheight;
 				sign_zoom();
 				signzoom = 0;
 				sign_layout();
-				console.log(1,dcwidth,savewidth,dcheight,saveheight,signzoom);
+				console.log(1,reheight,rewidth);
 			}
 		} else {
 			sign_layout();
-			console.log(2,dcwidth,savewidth,dcheight,saveheight,signzoom,changeheight,changewidth);
-		}
+			console.log(2,signzoom);
+		}*/
 	})
 
 
