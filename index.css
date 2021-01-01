@@ -222,25 +222,25 @@ form p:nth-of-type(3) {
 	top:0;
 }
 .bagua .wind {
-	transform: translate(79%,71%) rotate(45deg);
-	-webkit-transform: translate(79%,71%) rotate(45deg);
-	-o-transform: translate(79%,71%) rotate(45deg);
-	-ms-transform: translate(79%,71%) rotate(45deg);
-	-moz-transform: translate(79%,71%) rotate(45deg);
+	transform: translate(79%,68%) rotate(45deg);
+	-webkit-transform: translate(79%,68%) rotate(45deg);
+	-o-transform: translate(79%,68%) rotate(45deg);
+	-ms-transform: translate(79%,68%) rotate(45deg);
+	-moz-transform: translate(79%,68%) rotate(45deg);
 }
 .bagua .water {
-	transform: translate(110%,246%) rotate(90deg);	
-	-ms-transform: translate(110%,246%) rotate(90deg);
-	-webkit-transform: translate(110%,246%) rotate(90deg);
-	-o-transform: translate(110%,246%) rotate(90deg);
-	-moz-transform: translate(110%,246%) rotate(90deg);
+	transform: translate(110%,242%) rotate(90deg);	
+	-ms-transform: translate(110%,242%) rotate(90deg);
+	-webkit-transform: translate(110%,242%) rotate(90deg);
+	-o-transform: translate(110%,242%) rotate(90deg);
+	-moz-transform: translate(110%,242%) rotate(90deg);
 }
 .bagua .mountain {
-	transform: translate(79%,421%) rotate(135deg);
-	-webkit-transform: translate(79%,421%) rotate(135deg);
-	-o-transform: translate(79%,421%) rotate(135deg);
-	-ms-transform: translate(79%,421%) rotate(135deg);
-	-moz-transform: translate(79%,421%) rotate(135deg);
+	transform: translate(79%,418%) rotate(135deg);
+	-webkit-transform: translate(79%,418%) rotate(135deg);
+	-o-transform: translate(79%,418%) rotate(135deg);
+	-ms-transform: translate(79%,418%) rotate(135deg);
+	-moz-transform: translate(79%,418%) rotate(135deg);
 }
 .bagua .land {
 	transform: translate(0%,488%) rotate(180deg);
@@ -250,25 +250,25 @@ form p:nth-of-type(3) {
 	-ms-transform: translate(0%,488%) rotate(180deg);
 }
 .bagua .thunder {
-	transform: translate(-79%,421%) rotate(-135deg);
-	-webkit-transform: translate(-79%,421%) rotate(-135deg);
-	-o-transform: translate(-79%,421%) rotate(-135deg);
-	-ms-transform: translate(-79%,421%) rotate(-135deg);
-	-moz-transform: translate(-79%,421%) rotate(-135deg);
+	transform: translate(-79%,418%) rotate(-135deg);
+	-webkit-transform: translate(-79%,418%) rotate(-135deg);
+	-o-transform: translate(-79%,418%) rotate(-135deg);
+	-ms-transform: translate(-79%,418%) rotate(-135deg);
+	-moz-transform: translate(-79%,418%) rotate(-135deg);
 }
 .bagua .fire {
-	transform: translate(-110%,246%) rotate(-90deg);
-	-o-transform: translate(-110%,246%) rotate(-90deg);
-	-ms-transform: translate(-110%,246%) rotate(-90deg);
-	-webkit-transform: translate(-110%,246%) rotate(-90deg);
-	-moz-transform: translate(-110%,246%) rotate(-90deg);
+	transform: translate(-110%,242%) rotate(-90deg);
+	-o-transform: translate(-110%,242%) rotate(-90deg);
+	-ms-transform: translate(-110%,242%) rotate(-90deg);
+	-webkit-transform: translate(-110%,242%) rotate(-90deg);
+	-moz-transform: translate(-110%,242%) rotate(-90deg);
 }
 .bagua .lake {
-	transform: translate(-79%,71%) rotate(-45deg);
-	-o-transform: translate(-79%,71%) rotate(-45deg);
-	-webkit-transform: translate(-79%,71%) rotate(-45deg);
-	-ms-transform: translate(-79%,71%) rotate(-45deg);
-	-moz-transform: translate(-79%,71%) rotate(-45deg);
+	transform: translate(-79%,68%) rotate(-45deg);
+	-o-transform: translate(-79%,68%) rotate(-45deg);
+	-webkit-transform: translate(-79%,68%) rotate(-45deg);
+	-ms-transform: translate(-79%,68%) rotate(-45deg);
+	-moz-transform: translate(-79%,68%) rotate(-45deg);
 }
 
 

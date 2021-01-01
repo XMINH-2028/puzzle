@@ -24,7 +24,7 @@ function getSize() {
   	dcwidth = window.outerWidth;
   	dcheight = window.outerHeight;
   }
-  console.log(dcheight,dcwidth,window.outerHeight,window.outerWidth);
+
 
 }
 
@@ -153,17 +153,25 @@ function game_layout() {
 		$('.tiger').style.backgroundImage = "url('images/tiger1.png')";
 		$('.phoenix').style.backgroundImage = "url('images/phoenix1.png')";
 		$('.turtle').style.backgroundImage = "url('images/turtle1.png')";
-		if ((dcwidth/2-dcheight*0.45)<= dcheight*0.5) {
-			for (let i=0;i<$$('.four_symbols').length;i++) {
-				$$('.four_symbols')[i].style.width = (dcwidth/2-dcheight*0.45)+(dcheight*0.05)+'px';
-				$$('.four_symbols')[i].style.height = (dcwidth/2-dcheight*0.45)+(dcheight*0.05)+'px';
-			}	
-		} else {
+		if (dcheight*0.5<(dcwidth-0.9*dcheight)/2) {
 			for (let i=0;i<$$('.four_symbols').length;i++) {
 				$$('.four_symbols')[i].style.width = dcheight*0.5+'px';
 				$$('.four_symbols')[i].style.height = dcheight*0.5+'px';
 			}
-		}
+		} else {
+			if ((dcwidth-0.9*dcheight)/2>0.3*dcheight) {
+				for (let i=0;i<$$('.four_symbols').length;i++) {
+					$$('.four_symbols')[i].style.width = (dcwidth-0.9*dcheight)/2+'px';
+					$$('.four_symbols')[i].style.height = (dcwidth-0.9*dcheight)/2+'px';
+				}
+			} else {
+				for (let i=0;i<$$('.four_symbols').length;i++) {
+					$$('.four_symbols')[i].style.width = (0.9*dcheight*0.4+(dcwidth-0.9*dcheight+0.1*dcheight)/Math.sqrt(2))*Math.sqrt(2)/4+'px';
+					$$('.four_symbols')[i].style.height = (0.9*dcheight*0.4+(dcwidth-0.9*dcheight+0.1*dcheight)/Math.sqrt(2))*Math.sqrt(2)/4+'px';
+				}
+			}
+			
+		}	
 	} else {
 		$('.the-first_wrap').style.height  = 0.9*dcwidth+'px';
 		$('.the-first_wrap').style.width = 0.9*dcwidth+'px';
@@ -174,17 +182,25 @@ function game_layout() {
 		$('.tiger').style.backgroundImage = "url('images/tiger2.png')";
 		$('.phoenix').style.backgroundImage = "url('images/phoenix2.png')";
 		$('.turtle').style.backgroundImage = "url('images/turtle2.png')";
-		if ((dcheight/2-dcwidth*0.45)<= dcwidth*0.5) {
-			for (let i=0;i<$$('.four_symbols').length;i++) {
-				$$('.four_symbols')[i].style.width = (dcheight/2-dcwidth*0.45)+(dcwidth*0.05)+'px';
-				$$('.four_symbols')[i].style.height = (dcheight/2-dcwidth*0.45)+(dcwidth*0.05)+'px';
-			}
-		} else {
+		if (dcwidth*0.5<(dcheight-0.9*dcwidth)/2) {
 			for (let i=0;i<$$('.four_symbols').length;i++) {
 				$$('.four_symbols')[i].style.width = dcwidth*0.5+'px';
 				$$('.four_symbols')[i].style.height = dcwidth*0.5+'px';
 			}
-		}
+		} else {
+			if ((dcheight-0.9*dcwidth)/2>0.3*dcwidth) {
+				for (let i=0;i<$$('.four_symbols').length;i++) {
+					$$('.four_symbols')[i].style.width = (dcheight-0.9*dcwidth)/2+'px';
+					$$('.four_symbols')[i].style.height = (dcheight-0.9*dcwidth)/2+'px';
+				}
+			} else {
+				for (let i=0;i<$$('.four_symbols').length;i++) {
+					$$('.four_symbols')[i].style.width = (0.9*dcwidth*0.4+(dcheight-0.9*dcwidth+0.1*dcwidth)/Math.sqrt(2))*Math.sqrt(2)/4+'px';
+					$$('.four_symbols')[i].style.height = (0.9*dcwidth*0.4+(dcheight-0.9*dcwidth+0.1*dcwidth)/Math.sqrt(2))*Math.sqrt(2)/4+'px';
+				}
+			}
+			
+		}	
 	}
 }
 
