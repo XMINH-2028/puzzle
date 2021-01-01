@@ -142,6 +142,7 @@ function sign_zoom() {
 }
 function game_layout() {
 	$('.zero').style.height = dcheight+'px';
+	$('.zero').style.width = dcwidth+'px';
 	if (dcwidth > dcheight) {
 		$('.the-first_wrap').style.height = 0.9*dcheight+'px';
 		$('.the-first_wrap').style.width = 0.9*dcheight+'px';
@@ -194,46 +195,47 @@ signzoom=0;
 changeheight=dcheight;
 changewidth=dcwidth;
 sign_layout();
-var count=0;
 window.addEventListener('resize',()=>{
-		count+=1;
-		console.log(count);
 		getSize();
-		var reheight = dcheight - changeheight;
-		var rewidth = dcwidth - changewidth;
-		var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
-		console.log(math,reheight,rewidth);
-		if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
-			if (math<=2) {
-				signzoom = Number((savewidth/dcwidth).toFixed(4));
-				sign_zoom();
-				console.log(0,reheight,rewidth,signzoom); 
+		if (sign_time===1) {
+			var reheight = dcheight - changeheight;
+			var rewidth = dcwidth - changewidth;
+			var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
+			console.log(math,reheight,rewidth);
+			if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
+				if (math<=2) {
+					signzoom = Number((savewidth/dcwidth).toFixed(4));
+					sign_zoom();
+					console.log(0,reheight,rewidth,signzoom); 
+				} else {
+					sign_layout();
+					console.log(1,reheight,rewidth,signzoom);
+				}
 			} else {
 				sign_layout();
-				console.log(1,reheight,rewidth,signzoom);
-			}
-		} else {
-			sign_layout();
-			console.log(2,reheight,rewidth,signzoom);
-		}	
-		
-		/*if (math<=10 && ((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
-			if ((Math.abs(dcwidth-savewidth)>parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)>parseInt(0.05*saveheight))) {
-				signzoom = Number((savewidth/dcwidth).toFixed(4));
-				sign_zoom();
-				console.log(0,reheight,rewidth); 
-			} else if ((signzoom!=0) && (Math.abs(dcwidth-savewidth)<=parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)<=parseInt(0.05*saveheight))) {
-				savewidth=dcwidth;
-				saveheight=dcheight;
-				sign_zoom();
-				signzoom = 0;
+				console.log(2,reheight,rewidth,signzoom);
+			}	
+			/*if (math<=10 && ((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
+				if ((Math.abs(dcwidth-savewidth)>parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)>parseInt(0.05*saveheight))) {
+					signzoom = Number((savewidth/dcwidth).toFixed(4));
+					sign_zoom();
+					console.log(0,reheight,rewidth); 
+				} else if ((signzoom!=0) && (Math.abs(dcwidth-savewidth)<=parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)<=parseInt(0.05*saveheight))) {
+					savewidth=dcwidth;
+					saveheight=dcheight;
+					sign_zoom();
+					signzoom = 0;
+					sign_layout();
+					console.log(1,reheight,rewidth);
+				}
+			} else {
 				sign_layout();
-				console.log(1,reheight,rewidth);
-			}
-		} else {
-			sign_layout();
-			console.log(2,signzoom);
-		}*/
+				console.log(2,signzoom);
+			}*/
+		}
+		if (game_time===1) {
+			game_layout();
+		}
 	})
 
 
@@ -352,7 +354,6 @@ for (let i=0;i<$$('.submit').length;i++) {
 			$('.signlayout').innerHTML = '';
 			$('.signlayout').style.display = 'none';
 			$('.zero_bg').style.display = 'none';
-			
 			choosegame();
 			sign_time=0;
 		},1000)
