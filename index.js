@@ -4,7 +4,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 /*SET START WINDOW SIZE---*/
 var zerobg = 0;
-var dcsize,dcwidth,dcheight,savewidth,saveheight,savesize,changeheigth,changewidth,signzoom,outerh,outerw,saveh,savew;
+var dcsize,dcwidth,dcheight,savewidth,saveheight,savesize,changeheigth,changewidth,signzoom;
 
 function getSize() {
   if( typeof( window.innerWidth ) == 'number' ) {
@@ -20,13 +20,11 @@ function getSize() {
     dcwidth = document.body.clientWidth;
     dcheight = document.body.clientHeight;
   }
-  	outerw = window.outerWidth;
-  	outerh = window.outerHeight;
   if (window.innerWidth>window.outerWidth || window.innerHeight>window.outerHeight) {
   	dcwidth = window.outerWidth;
   	dcheight = window.outerHeight;
   }
-  console.log(dcheight,dcwidth);
+  console.log(dcheight,dcwidth,window.outerHeight,window.outerWidth);
 
 }
 
@@ -134,8 +132,6 @@ function sign_layout() {
 function sign_zoom() {
 	changeheight=dcheight;
 	changewidth=dcwidth;
-	savew=outerw;
-	saveh=outerh;
 	$('.zero').style.width = savewidth+'px';
 	$('.zero').style.height = saveheight+'px';
 	dcsize = savesize;
@@ -197,19 +193,18 @@ getSize();
 signzoom=0;
 changeheight=dcheight;
 changewidth=dcwidth;
-saveh=outerh;
-savew=outerw;
 sign_layout();
-
+var count=0;
 window.addEventListener('resize',()=>{
+		count+=1;
+		console.log(count);
 		getSize();
 		var reheight = dcheight - changeheight;
 		var rewidth = dcwidth - changewidth;
 		var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
-		var mathouter = Math.abs(parseInt((outerw-savew)/savew*1000)-parseInt((outerh-saveh)/saveh*1000));
-		console.log(math,mathouter,reheight,rewidth);
+		console.log(math,reheight,rewidth);
 		if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
-			if (math<=2 && mathouter<=2) {
+			if (math<=2) {
 				signzoom = Number((savewidth/dcwidth).toFixed(4));
 				sign_zoom();
 				console.log(0,reheight,rewidth,signzoom); 

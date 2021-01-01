@@ -11,6 +11,7 @@
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
+	height: 100vh;
 }	
 .gamelayout {
 	width: 100%;
