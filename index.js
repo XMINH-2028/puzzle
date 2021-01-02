@@ -218,7 +218,7 @@ window.addEventListener('resize',()=>{
 			var rewidth = dcwidth - changewidth;
 			var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
 			console.log(math,reheight,rewidth);
-			if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
+			/*if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
 				if (math<=2) {
 					signzoom = Number((savewidth/dcwidth).toFixed(4));
 					sign_zoom();
@@ -230,8 +230,8 @@ window.addEventListener('resize',()=>{
 			} else {
 				sign_layout();
 				console.log(2,reheight,rewidth,signzoom);
-			}	
-			/*if (math<=10 && ((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
+			}	*/
+			if (math<=10 && ((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
 				if ((Math.abs(dcwidth-savewidth)>parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)>parseInt(0.05*saveheight))) {
 					signzoom = Number((savewidth/dcwidth).toFixed(4));
 					sign_zoom();
@@ -247,7 +247,7 @@ window.addEventListener('resize',()=>{
 			} else {
 				sign_layout();
 				console.log(2,signzoom);
-			}*/
+			}
 		}
 		if (game_time===1) {
 			game_layout();
