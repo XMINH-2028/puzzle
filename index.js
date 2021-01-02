@@ -4,7 +4,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 /*SET START WINDOW SIZE---*/
 var zerobg = 0;
-var dcsize,dcwidth,dcheight,savewidth,saveheight,savesize,changeheigth,changewidth,signzoom;
+var dcsize,dcwidth,dcheight;
 
 function getSize() {
   if( typeof( window.innerWidth ) == 'number' ) {
@@ -20,12 +20,7 @@ function getSize() {
     dcwidth = document.body.clientWidth;
     dcheight = document.body.clientHeight;
   }
-  if (window.innerWidth>window.outerWidth || window.innerHeight>window.outerHeight) {
-  	dcwidth = window.outerWidth;
-  	dcheight = window.outerHeight;
-  }
-
-
+  
 }
 
 
@@ -53,45 +48,15 @@ function getScrollbarWidth() {
 }
 
 function sign_layout() {
-	if (signzoom!==0) {
-		if (dcheight!==changeheight) {
-			changeheigth = dcheight;
-			dcheight=Number((dcheight*signzoom).toFixed(0));
-			saveheight = dcheight;
-		} else {
-			dcheight = saveheight;
-		}
-		if (dcwidth!==changewidth) {
-			changewidth = dcwidth;
-			dcwidth=Number((dcwidth*signzoom).toFixed(0));
-			savewidth = dcwidth;
-		} else {
-			dcwidth = savewidth;	
-		}
-	}
 	if (dcwidth > dcheight) {
 		if (dcheight < 280) {
 			$('.zero').style.height = '280px';
 			$('.zero').style.width = dcwidth-getScrollbarWidth()+'px';
-			if (signzoom===0) {
-				changewidth = dcwidth;
-				savewidth = dcwidth;
-				changeheigth = 280;
-				saveheight = 280;
-				savesize = 280;
-			}
 			dcsize =280;
 			$('.signlayout').style.height = "280px";
 		} else {
 			$('.zero').style.height = dcheight+'px';
 			$('.zero').style.width = dcwidth+'px';
-			if (signzoom===0) {
-				changeheight = dcheight;
-				changewidth = dcwidth;
-				savewidth = dcwidth;
-				saveheight = dcheight;
-				savesize = dcheight;
-			}
 			dcsize = dcheight;
 			$('.signlayout').style.height = "100%";
 			$('.signlayout').style.width = "100%";
@@ -99,26 +64,12 @@ function sign_layout() {
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	} else {
-		if (signzoom===0) {
-			saveheight = dcheight;
-			changeheight = dcheight;
-		}	
 		if (dcwidth < 280) {
-			if (signzoom===0) {
-				changewidth = 280;
-				savewidth = 280;
-				savesize = 280;
-			}
 			dcsize =280;
 			$('.zero').style.height = dcheight-getScrollbarWidth()+'px';
 			$('.zero').style.width = '280px';
 			$('.signlayout').style.width = "280px";
 		} else {
-			if (signzoom===0) {
-				changewidth = dcwidth;
-				savewidth = dcwidth;
-				savesize = dcwidth;
-			}
 			dcsize = dcwidth;
 			$('.zero').style.height = dcheight+'px';
 			$('.zero').style.width = dcwidth+'px';
@@ -129,17 +80,7 @@ function sign_layout() {
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	}
 }
-function sign_zoom() {
-	changeheight=dcheight;
-	changewidth=dcwidth;
-	$('.zero').style.width = savewidth+'px';
-	$('.zero').style.height = saveheight+'px';
-	dcsize = savesize;
-	$('.signlayout').style.height = "100%";
-	$('.signlayout').style.width = "100%";	
-	$('.bagua').style.height = 0.9*dcsize+'px';
-	$('.bagua').style.width = 0.9*dcsize+'px';
-}
+
 function game_layout() {
 	$('.zero').style.height = dcheight+'px';
 	$('.zero').style.width = dcwidth+'px';
@@ -207,47 +148,13 @@ function game_layout() {
 var sign_time=1;
 var game_time=0;
 getSize();
-signzoom=0;
-changeheight=dcheight;
-changewidth=dcwidth;
 sign_layout();
 window.addEventListener('resize',()=>{
 		getSize();
 		if (sign_time===1) {
-			var reheight = dcheight - changeheight;
-			var rewidth = dcwidth - changewidth;
-			var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
-			console.log(math,reheight,rewidth);
-			if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
-				if (math<=2) {
-					signzoom = Number((savewidth/dcwidth).toFixed(4));
-					sign_zoom();
-					console.log(0,reheight,rewidth,signzoom); 
-				} else {
-					sign_layout();
-					console.log(1,reheight,rewidth,signzoom);
-				}
-			} else {
+			
 				sign_layout();
-				console.log(2,reheight,rewidth,signzoom);
-			}	
-			/*if (math<=10 && ((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
-				if ((Math.abs(dcwidth-savewidth)>parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)>parseInt(0.05*saveheight))) {
-					signzoom = Number((savewidth/dcwidth).toFixed(4));
-					sign_zoom();
-					console.log(0,reheight,rewidth); 
-				} else if ((signzoom!=0) && (Math.abs(dcwidth-savewidth)<=parseInt(0.05*savewidth)) && (Math.abs(dcheight-saveheight)<=parseInt(0.05*saveheight))) {
-					savewidth=dcwidth;
-					saveheight=dcheight;
-					sign_zoom();
-					signzoom = 0;
-					sign_layout();
-					console.log(1,reheight,rewidth);
-				}
-			} else {
-				sign_layout();
-				console.log(2,signzoom);
-			}*/
+			
 		}
 		if (game_time===1) {
 			game_layout();
