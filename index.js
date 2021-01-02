@@ -367,6 +367,7 @@ for (let i=0;i<$$('.submit').length;i++) {
 		game_layout();
 		game_time = 1;
 		setTimeout(()=>{
+			openFullscreen();
 			$('.signlayout').innerHTML = '';
 			$('.signlayout').style.display = 'none';
 			$('.zero_bg').style.display = 'none';
