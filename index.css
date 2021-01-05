@@ -560,7 +560,6 @@ form p:nth-of-type(3) {
 }
 
 
-
 @media screen and (max-width: 576px), (max-height: 576px) {
 	form p:nth-of-type(1) {
 		margin-top:6px;
@@ -673,5 +672,17 @@ form p:nth-of-type(3) {
 	}
 }
 
+
+@media screen and (min-width: 450px) and (min-height: 650px) {
+	.bagua_child .yang {
+	    font-size: 86%;
+	}
+}
+
+@media screen and (min-width: 600px) and (min-height: 800px) {
+	.bagua_child .yang {
+	    font-size: 68%;
+	}
+}
 
 

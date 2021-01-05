@@ -20,12 +20,6 @@ function getSize() {
     dcwidth = document.body.clientWidth;
     dcheight = document.body.clientHeight;
   }
-  if (window.innerWidth>window.outerWidth || window.innerHeight>window.outerHeight) {
-  	dcwidth = window.outerWidth;
-  	dcheight = window.outerHeight;
-  }
-
-
 }
 
 
@@ -217,7 +211,7 @@ window.addEventListener('resize',()=>{
 			var reheight = dcheight - changeheight;
 			var rewidth = dcwidth - changewidth;
 			var math = Math.abs(parseInt((dcwidth-savewidth)/savewidth*1000)-parseInt((dcheight-saveheight)/saveheight*1000));
-			console.log(math,reheight,rewidth);
+			console.log(math,reheight,rewidth,dcheight,dcwidth);
 			/*if (((reheight<0 && rewidth<0)||(reheight>0 && rewidth>0))) {
 				if (math<=2) {
 					signzoom = Number((savewidth/dcwidth).toFixed(4));
