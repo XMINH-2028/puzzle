@@ -20,7 +20,7 @@ function getSize() {
     dcwidth = document.body.clientWidth;
     dcheight = document.body.clientHeight;
   }
-  
+  console.log(dcheight,dcwidth)
 }
 
 
@@ -49,33 +49,23 @@ function getScrollbarWidth() {
 
 function sign_layout() {
 	if (dcwidth > dcheight) {
-		if (dcheight < 280) {
-			$('.zero').style.height = '280px';
-			$('.zero').style.width = dcwidth-getScrollbarWidth()+'px';
-			dcsize =280;
-			$('.signlayout').style.height = "280px";
-		} else {
+		
 			$('.zero').style.height = dcheight+'px';
 			$('.zero').style.width = dcwidth+'px';
 			dcsize = dcheight;
 			$('.signlayout').style.height = "100%";
 			$('.signlayout').style.width = "100%";
-		}
+		
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	} else {
-		if (dcwidth < 280) {
-			dcsize =280;
-			$('.zero').style.height = dcheight-getScrollbarWidth()+'px';
-			$('.zero').style.width = '280px';
-			$('.signlayout').style.width = "280px";
-		} else {
+		
 			dcsize = dcwidth;
 			$('.zero').style.height = dcheight+'px';
 			$('.zero').style.width = dcwidth+'px';
 			$('.signlayout').style.width = "100%";
 			$('.signlayout').style.height = "100%";
-		}
+	
 		$('.bagua').style.height = 0.9*dcsize+'px';
 		$('.bagua').style.width = 0.9*dcsize+'px';
 	}

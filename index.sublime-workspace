@@ -1,0 +1,277 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sign",
+				"signzoom"
+			],
+			[
+				"cha",
+				"changewidth〔variable〕"
+			],
+			[
+				"ch",
+				"changewidth"
+			],
+			[
+				"ga",
+				"game_layout"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"tra",
+				"transition\tproperty"
+			],
+			[
+				"set",
+				"setInterval〔function〕"
+			],
+			[
+				"cl",
+				"classList"
+			],
+			[
+				"dis",
+				"display\tproperty"
+			],
+			[
+				"ligh",
+				"line-height\tproperty"
+			],
+			[
+				"co",
+				"cover\tbackground-size"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"cp",
+				"Package Control: Install Package"
+			],
+			[
+				"conn",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Administrator/Desktop/Project/urban_reactjs/src/App.css",
+		"/C/Users/Administrator/Desktop/Git/VSC/off 12/fixvs4.html",
+		"/C/Users/Administrator/Desktop/Git/puzzle/index.js",
+		"/C/Users/Administrator/Desktop/Project/kelis/home.js",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/urban_reactjs/src/components/home/Banner.js",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/urban_reactjs/src/components/header/Nav.js",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/urban_reactjs/package.json",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/urban_reactjs/src/App.css",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/home.js",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/search.css",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/home.css",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/sale.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/view.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/product.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/product-2.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/product-3.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/product-4.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/product.css",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/index-demo.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/index.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/security.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/service.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/test.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/searchempty.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/searchinfo.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/policy.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/newsblog1.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/newsblog2.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/newsblog3.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/newsblog4.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/news.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/login.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/intro.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/header_footer.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/empty_cart.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/contact.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/cart_info.html",
+		"/C/Users/Administrator/Desktop/Cutthemes/WEB88/kelis/home.html",
+		"/C/Users/Administrator/Desktop/Git/puzzle/gamespace.html",
+		"/C/Users/Administrator/Desktop/Git/puzzle/index.html",
+		"/C/Users/Administrator/Desktop/Git/VSC/Bootstrap/vinatrada-fixvs.css",
+		"/C/Users/Administrator/Desktop/Git/VSC/off 12/fixvs4.css",
+		"/C/Users/Administrator/Desktop/urban/src/components/home/Home.js",
+		"/C/Users/Administrator/Desktop/Git/puzzle/index.css",
+		"/C/Users/Administrator/Desktop/puzzle/index.html",
+		"/C/Users/Administrator/Desktop/puzzle/index.css",
+		"/C/Users/Administrator/Desktop/puzzle/index.js",
+		"/C/Users/Administrator/Desktop/Git/VSC/js/spinning.html",
+		"/C/Users/Administrator/Desktop/Reactjs/urban/src/components/product/Allproduct.js"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
