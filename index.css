@@ -1,0 +1,688 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.zero {
+	position: relative;	
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+}	
+.gamelayout {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.zero_bg {
+	position: fixed;
+	background-image: radial-gradient(circle, white, silver, grey);
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	transition: opacity 1s;
+}
+.signlayout {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	transition: opacity 1s;	
+}
+
+.bagua {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+form {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	display: none;
+	transition: 0.5s linear;
+	background: black;
+	transform-origin: center center;
+}
+.foscale2 {
+	transform: scale(1.98);
+	-webkit-transform: scale(1.98);
+	-o-transform: scale(1.98);
+	-moz-transform: scale(1.98);
+	-ms-transform: scale(1.98);
+	transition: transform 1s;
+}
+form div {
+	height: 15%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+form input {
+	width: 100%;
+	position: relative;
+	border: none;
+	outline: none;
+	height: 48%;
+}
+
+form label {
+	color: white;
+}
+form p {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 80%;
+	width: 100%;
+}
+form p input {
+	width: auto;
+	margin-right: 3px;
+	height: auto;
+}
+form button {
+	width: 50%;
+	background: white;
+	font-weight: bold;
+	border: none;
+	padding: 3% 0;
+	font-size: 16px;
+}
+form div:last-child {
+	height:25%;
+	justify-content: center;
+}
+form p:nth-of-type(1) {
+	margin-top: 12px;
+}
+form p:nth-of-type(2) {
+	margin-top:	3px;
+}
+form p:nth-of-type(3) {
+	margin-top:	20px;
+	justify-content: center;
+}
+#sign_in div {
+	height: 20%;
+}
+#sign_in div:last-child {
+	height: 40%;
+}
+#sign_in input {
+	height: 38%;
+}
+#sign_in p input {
+	height: auto;
+}
+
+.bagua_mask {
+	position: absolute;
+	width: 25%;
+	height:25%;
+	top: 37.5%;
+	left:37.5%;
+	cursor: pointer;
+}
+.bmrotate {
+	animation: fcscale 6s infinite linear;
+	-webkit-animation: fcscale 6s infinite linear;
+	-o-animation: fcscale 6s infinite linear;
+	-moz-animation: fcscale 6s infinite linear;
+}
+.balance {
+	width: 46% !important;
+	height:	46% !important;
+	top: 27%;
+	left: 27%;
+	transform: rotate(0deg) rotateY(0deg) !important;
+	-webkit-transform: rotate(0deg) rotateY(0deg) !important;
+	-o-transform: rotate(0deg) rotateY(0deg) !important;
+	-moz-transform: rotate(0deg) rotateY(0deg) !important;
+	-ms-transform: rotate(0deg) rotateY(0deg) !important;
+}
+.balance_child1 {
+	transform: scaleX(0) !important;
+	-webkit-transform: scaleX(0) !important;
+	-moz-transform: scaleX(0) !important;
+	-o-transform: scaleX(0) !important;
+	-ms-transform: scaleX(0) !important;
+	transition: 1s linear;
+}
+.balance_child2 {
+	border-radius: 0 !important;
+	transition: 1s linear;
+}
+.bagua_child {
+	position: absolute;
+	width: 37.71%;
+	height: 17%;
+	top:0;
+	left: 31.14%;
+	clip-path: polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
+	-webkit-clip-path:polygon(0% 0%, 18% 100%, 82% 100%, 100% 0%);
+}
+.bagua_child > div {
+	width: 100%;
+	height: 25%;
+	position: absolute;
+}
+.bagua_child .yang {
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.yang_active {
+	background: white !important;
+	color: black !important;
+}
+.sky .yang {
+	cursor: pointer;
+}
+.yin {
+	display: flex;
+	justify-content: space-between;
+}
+.yin > div	{
+	width: 46.8%;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.bagua_child > div:nth-child(1) {
+	left:0;
+	bottom:0;
+}
+.bagua_child > div:nth-child(2) {
+	left:0;
+	bottom:37.5%;
+}
+.bagua_child > div:nth-child(3) {
+	left:0;
+	top:0;
+}
+.bagua .wind {
+	transform: translate(79%,68%) rotate(45deg);
+	-webkit-transform: translate(79%,68%) rotate(45deg);
+	-o-transform: translate(79%,68%) rotate(45deg);
+	-ms-transform: translate(79%,68%) rotate(45deg);
+	-moz-transform: translate(79%,68%) rotate(45deg);
+}
+.bagua .water {
+	transform: translate(110%,242%) rotate(90deg);	
+	-ms-transform: translate(110%,242%) rotate(90deg);
+	-webkit-transform: translate(110%,242%) rotate(90deg);
+	-o-transform: translate(110%,242%) rotate(90deg);
+	-moz-transform: translate(110%,242%) rotate(90deg);
+}
+.bagua .mountain {
+	transform: translate(79%,418%) rotate(135deg);
+	-webkit-transform: translate(79%,418%) rotate(135deg);
+	-o-transform: translate(79%,418%) rotate(135deg);
+	-ms-transform: translate(79%,418%) rotate(135deg);
+	-moz-transform: translate(79%,418%) rotate(135deg);
+}
+.bagua .land {
+	transform: translate(0%,488%) rotate(180deg);
+	-moz-transform: translate(0%,488%) rotate(180deg);
+	-o-transform: translate(0%,488%) rotate(180deg);
+	-webkit-transform: translate(0%,488%) rotate(180deg);
+	-ms-transform: translate(0%,488%) rotate(180deg);
+}
+.bagua .thunder {
+	transform: translate(-79%,418%) rotate(-135deg);
+	-webkit-transform: translate(-79%,418%) rotate(-135deg);
+	-o-transform: translate(-79%,418%) rotate(-135deg);
+	-ms-transform: translate(-79%,418%) rotate(-135deg);
+	-moz-transform: translate(-79%,418%) rotate(-135deg);
+}
+.bagua .fire {
+	transform: translate(-110%,242%) rotate(-90deg);
+	-o-transform: translate(-110%,242%) rotate(-90deg);
+	-ms-transform: translate(-110%,242%) rotate(-90deg);
+	-webkit-transform: translate(-110%,242%) rotate(-90deg);
+	-moz-transform: translate(-110%,242%) rotate(-90deg);
+}
+.bagua .lake {
+	transform: translate(-79%,68%) rotate(-45deg);
+	-o-transform: translate(-79%,68%) rotate(-45deg);
+	-webkit-transform: translate(-79%,68%) rotate(-45deg);
+	-ms-transform: translate(-79%,68%) rotate(-45deg);
+	-moz-transform: translate(-79%,68%) rotate(-45deg);
+}
+
+
+.the-first_wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	background-image: url(images/bagua.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: background-size 1s linear;
+	-o-transition: background-size 1s linear;
+	-moz-transition: background-size 1s linear;
+	-webkit-transition: background-size 1s linear;
+}
+.first_child {
+	position: absolute;
+	width: 25%;
+	height: 25%;
+	top: 37.5%;
+	left:37.5%;
+	background-image: url('images/yangyin2.png');
+	background-size: cover;
+	background-position: center;
+	transition: 1s linear;
+	-o-transition: 1s linear;
+	-webkit-transition: 1s linear;
+	-moz-transition: 1s linear;
+	animation: fcscale 6s linear infinite;
+	-o-animation: fcscale 6s linear infinite;
+	-webkit-animation: fcscale 6s linear infinite;
+	-moz-animation: fcscale 6s linear infinite;
+}
+.fw_scale {
+	animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: fwscale 3s cubic-bezier(1,0,1,1) forwards;
+}
+.the-first {
+	display: flex;
+	width: 100%;
+	height:100%;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.the-first_wrap .the-first {
+	opacity: 0;
+	transition: opacity 1s linear;
+	-webkit-transition: opacity 1s, transform 1s linear;
+	-o-transition: opacity 1s, transform 1s linear;
+	-moz-transition: opacity 1s, transform 1s linear;
+}
+.tf_frotate {
+	animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: frotate 3s cubic-bezier(1,0,1,1) forwards;
+}
+.tf_trotate {
+	animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: trotate 3s cubic-bezier(1,0,1,1) forwards;
+}
+.the-second_wrap {
+	flex: 50%;
+	height: 100%;
+	position: relative;
+	background: black;
+}
+.the-second {
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	width: 50%;
+	height:50%;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	background: black;
+}
+.the-second_child {
+	width:20%;
+	height:20%;
+	border-radius: 100%;
+	background: white;
+}
+.the-third_wrap {
+	flex: 50%;
+	height: 100%;
+	position: relative;
+	background: white;
+}
+.the-third {
+	position: absolute;
+	top:0;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+.the-third_child {
+	width:20%;
+	height:20%;
+	border-radius: 100%;
+	background: black;
+}
+
+.dragon {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	top:0px;
+	right:0px;
+	background-position: bottom left;
+	background-size: cover;
+}
+.opendg {
+	animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: dragon 3s cubic-bezier(1,0,1,1) forwards;
+}
+.tiger {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	bottom:0px;
+	left:0px;
+	background-position: top right;
+	background-size: cover;
+}
+.opentg {
+	animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: tiger 3s cubic-bezier(1,0,1,1) forwards;
+}
+.phoenix {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	bottom:0px;
+	right:0px;
+	background-position: top left;
+	background-size: cover;
+	overflow: hidden;
+}
+.openpn {
+	animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: phoenix 3s cubic-bezier(1,0,1,1) forwards;
+}
+.turtle {
+	position: absolute;
+	width: 50%;
+	height:50%;
+	top:0px;
+	left:0px;
+	background-position: bottom right;
+	background-size: cover;
+}
+.opentt {
+	animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+	-o-animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+	-moz-animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+	-webkit-animation: turtle 3s cubic-bezier(1,0,1,1) forwards;
+}
+.four_symbols {
+	background-size: 68% 68%;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	transition: 0.5s linear;
+	-o-transition: 0.5s linear;
+	-webkit-transition: 0.5s linear;
+	-moz-transition: 0.5s linear;
+}
+.yangyin {
+	position: absolute;
+	width:14%;
+	height:14%;
+	border-radius: 50%;
+	top:43%;
+	left:43%;
+}
+.dragon_child {
+	background-image: url('images/dragon.png');
+	top:0px;
+	right:0px;
+}
+.dragon_child .yangyin {
+	background: green;
+}
+.tiger_child {
+	background-image: url('images/tiger.png');
+	bottom:0px;
+	left:0px;
+}
+.tiger_child .yangyin {
+	background: white;
+}
+.phoenix_child {
+	background-image: url('images/phoenix.png');
+	bottom:0px;
+	right:0px;
+}
+.phoenix_child .yangyin {
+	background: red;
+}
+.turtle_child {
+	background-image: url('images/turtle.png');
+	top:0px;
+	left:0px;
+}
+.turtle_child .yangyin {
+	background: black;
+}
+
+@keyframes frotate {
+	from {transform: rotate(0deg) scale(1); -webkit-transform: rotate(0deg) scale(1); -o-transform: rotate(0deg) scale(1);
+		-moz-transform: rotate(0deg) scale(1);}
+	to {transform: rotate(-3600deg) scale(0); -webkit-transform: rotate(-3600deg) scale(0); -o-transform: rotate(-3600deg) scale(0);
+		-moz-transform: rotate(-3600deg) scale(0);}
+}
+@keyframes trotate {
+	from {transform: rotate(0deg) scale(1);}
+	to {transform: rotate(3600deg) scale(0);}
+}
+@keyframes fwscale {
+	from {transform: translate(-50%,-50%) scale(1); -webkit-transform: translate(-50%,-50%) scale(1); -o-transform: translate(-50%,-50%) scale(1);
+		-moz-transform: translate(-50%,-50%) scale(1);}
+	to {transform: translate(-50%,-50%) scale(0); -webkit-transform: translate(-50%,-50%) scale(0); -o-transform: translate(-50%,-50%) scale(0);
+		-moz-transform: translate(-50%,-50%) scale(0);}
+}
+@keyframes fcscale {
+	0% {transform: rotate(0deg) rotateY(0deg);
+		-webkit-transform: rotate(0deg) rotateY(0deg);
+		-moz-transform: rotate(0deg) rotateY(0deg);
+		-o-transform: rotate(0deg) rotateY(0deg);
+		-ms-transform: rotate(0deg) rotateY(0deg);}
+	40% {transform: rotate(-360deg) rotateY(0deg);
+		-webkit-transform: rotate(-360deg) rotateY(0deg);
+		-moz-transform: rotate(-360deg) rotateY(0deg);
+		-o-transform: rotate(-360deg) rotateY(0deg);
+		-ms-transform: rotate(-360deg) rotateY(0deg);}
+	50% {transform: rotate(-360deg) rotateY(180deg);-webkit-transform: rotate(-360deg) rotateY(180deg);
+		 -moz-transform: rotate(-360deg) rotateY(180deg);-o-transform: rotate(-360deg) rotateY(180deg);
+		 -ms-transform: rotate(-360deg) rotateY(180deg);}
+	90% {transform: rotate(0deg) rotateY(180deg);-webkit-transform: rotate(0deg) rotateY(180deg);
+		-o-transform: rotate(0deg) rotateY(180deg);-moz-transform: rotate(0deg) rotateY(180deg);
+		-ms-transform: rotate(0deg) rotateY(180deg);}
+	100% {transform: rotate(0deg) rotateY(0deg);-webkit-transform: rotate(0deg) rotateY(0deg);
+		-o-transform: rotate(0deg) rotateY(0deg);-moz-transform: rotate(0deg) rotateY(0deg);
+		-ms-transform: rotate(0deg) rotateY(0deg);}
+	
+}
+
+@keyframes dragon {
+	form {top:0px; right:0px;}
+	to {top:-50%;right:-50%;}
+}
+@keyframes tiger {
+	form {bottom:0px; left:0px;}
+	to {bottom:-50%;left:-50%;}
+}
+@keyframes turtle {
+	form {top:0px; left:0px;}
+	to {top:-50%;left:-50%;}
+}
+@keyframes phoenix {
+	form {bottom:0px; right:0px;}
+	to {bottom:-50%;right:-50%;}
+}
+
+
+@media screen and (max-width: 576px), (max-height: 576px) {
+	form p:nth-of-type(1) {
+		margin-top:6px;
+	}
+	form p:nth-of-type(3) {
+		margin-top:20px;
+	}
+}
+@media screen and (max-width: 500px), (max-height: 500px) {
+	.bagua_child .yang {
+		font-size: 68%;
+	}
+	form,p {
+		font-size: 68%;
+	}
+	form button {
+		font-size: 12px;
+	}
+	form p:nth-of-type(3) {
+		margin-top:5px;
+	}
+	form p:nth-of-type(2) {
+		margin-top:	1px;
+	}
+	form p:nth-of-type(1) {
+		margin-top:2px;
+	}
+}
+@media screen and (max-height: 400px ),(max-width: 400px) {
+	.bagua_child .yang {
+		font-size: 60% !important;
+	}
+	form,p {
+		font-size: 60%;
+	}
+	form input {
+		height: 11px !important;
+		font-size: 10px;
+	}
+	form button {
+		font-size: 10px;
+	}
+	
+}
+@media screen and (max-height: 340px ),(max-width: 340px) {
+	.bagua_child .yang {
+		font-size: 50% !important;
+	}
+	form,p {
+		font-size: 50%;
+	}
+	form input {
+		height: 10px !important;
+		font-size: 9px;
+	}
+	form button {
+		font-size: 9px;
+	}
+	form p:nth-of-type(1) {
+		margin-top: 2px;
+	}
+
+	form p:nth-of-type(3) {
+		margin-top: 4px;
+	}
+}
+@media screen and (max-height: 320px ),(max-width: 320px) {
+	.bagua_child .yang {
+		font-size: 50% !important;
+	}
+	form,p {
+		font-size: 50%;
+	}
+	form input {
+		height: 9px !important;
+		font-size: 8px;
+	}
+	form button {
+		font-size: 8px;
+	}
+	form p:nth-of-type(1) {
+		margin-top: 2px;
+	}
+
+	form p:nth-of-type(3) {
+		margin-top: 4px;
+	}
+}
+
+@media screen and (max-height: 300px ),(max-width: 300px) {
+	form,p {
+		font-size: 7px;
+	}
+	form input {
+		height: 8px !important;
+		font-size: 7px;
+	}
+	.bagua_child .yang {
+		font-size: 7px !important;
+	}
+	form button {
+		font-size: 7px;
+	}
+	form p:nth-of-type(1) {
+		margin-top:1px;
+	}
+
+	form p:nth-of-type(3) {
+		margin-top:3px;
+	}
+}
+
+
+@media screen and (min-width: 450px) and (min-height: 650px) {
+	.bagua_child .yang {
+	    font-size: 86%;
+	}
+}
+
+@media screen and (min-width: 600px) and (min-height: 800px) {
+	.bagua_child .yang {
+	    font-size: 68%;
+	}
+}
+
+
